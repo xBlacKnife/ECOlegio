@@ -1,4 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 <comment> Project Configuration </comment>
+<entry key="Chapter0.ClaseVidrio.X">-341</entry>
+<entry key="Chapter0.ClaseVidrio.Y">228</entry>
+<entry key="Chapter0.ClaseOrgánico.X">-298</entry>
+<entry key="Chapter0.ClaseOrgánico.Y">-18</entry>
+<entry key="Chapter0.ClasePapel.X">563</entry>
+<entry key="Chapter0.ClasePapel.Y">-2</entry>
+<entry key="Chapter0.ClasePlástico.X">604</entry>
+<entry key="Chapter0.ClasePlástico.Y">226</entry>
+<entry key="Chapter0.PasilloPlanta0.X">147</entry>
+<entry key="Chapter0.PasilloPlanta0.Y">442</entry>
+<entry key="Chapter0.PasilloPlanta1.X">110</entry>
+<entry key="Chapter0.PasilloPlanta1.Y">226</entry>
+<entry key="Chapter0.PasilloPlanta2.X">128</entry>
+<entry key="Chapter0.PasilloPlanta2.Y">-25</entry>
+<entry key="Chapter0.Patio.X">595</entry>
+<entry key="Chapter0.Patio.Y">447</entry>
+<entry key="Chapter0.Cafetería.X">-312</entry>
+<entry key="Chapter0.Cafetería.Y">450</entry>
 </properties>

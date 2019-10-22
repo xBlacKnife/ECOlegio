@@ -1,0 +1,60 @@
+- DEFINIR HISTORIA
+	ecologista -> reciclar y concienciar
+		4 clases
+			1 plástico
+			1 vidrio
+			1 orgánico
+			1 papel cartón
+		1 hall -> donde estan los contenedores
+		2 escaleras -> encuentras peña que ensucia
+		1 patio -> todo mezclado
+		1 cafeteria
+
+		puntuacion final -> con las decisiones y el tiempo
+
+		limite de tiempo -> como si fuese un desafio
+
+		cada profe da una charla de cada elemento
+
+CARTON
+> periodico
+> libreta
+> cartulina
+> caja
+> avion de papel
+> revistas
+> caja de galletas
+> caja de cerales
+
+VIDRIO
+> botella -> cafeteria
+> botella -> clase
+> tarros de potito xd
+> tarro de lentejas
+> frasco de perfume
+
+PLÁSTICO
+> brick de zumito :)
+> patatas fritas (envase) 
+> lata de refresco
+> papel plata
+> botellas de agua
+
+ORGÁNICO
+> platano
+> bocadillo
+> galletas
+> servilletas
+> hamburguesa
+
+ESPECIALES:
+> tapper con comida pocha
+> hojas con portafolios 
+
+- DEFINIR COMO CONSEGUIR ASSETS
+> free asets para basura
+> assets drive proyecto igualdad
+
+- DIVIDIR TRABAJO
+- GDD "PEQUEÑO"
+- GAMEPLAY GRABADO
