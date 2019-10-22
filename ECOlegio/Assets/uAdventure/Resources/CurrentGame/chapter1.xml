@@ -43,7 +43,7 @@
     <default-initial-position x="400" y="450" />
     <exits>
       <exit rectangular="yes" x="1801" y="196" width="128" height="476" hasInfluenceArea="no" idTarget="PasilloPlanta1" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" />
+        <exit-look text="" cursor-path="" sound-path="" />
       </exit>
     </exits>
   </scene>
@@ -58,7 +58,7 @@
     <default-initial-position x="400" y="450" />
     <exits>
       <exit rectangular="yes" x="1801" y="160" width="136" height="527" hasInfluenceArea="no" idTarget="PasilloPlanta2" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" />
+        <exit-look text="" cursor-path="" sound-path="" />
       </exit>
     </exits>
   </scene>
@@ -73,7 +73,7 @@
     <default-initial-position x="400" y="450" />
     <exits>
       <exit rectangular="yes" x="120" y="168" width="128" height="516" hasInfluenceArea="no" idTarget="PasilloPlanta2" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" />
+        <exit-look text="" cursor-path="" sound-path="" />
       </exit>
     </exits>
   </scene>
@@ -88,7 +88,7 @@
     <default-initial-position x="400" y="450" />
     <exits>
       <exit rectangular="yes" x="116" y="176" width="140" height="492" hasInfluenceArea="no" idTarget="PasilloPlanta1" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" />
+        <exit-look text="" cursor-path="" sound-path="" />
       </exit>
     </exits>
   </scene>
@@ -106,6 +106,9 @@
         <exit-look text="" cursor-path="" sound-path="" />
       </exit>
       <exit rectangular="yes" x="4" y="136" width="128" height="576" hasInfluenceArea="no" idTarget="Cafetería" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
+      <exit rectangular="yes" x="822" y="20" width="364" height="494" hasInfluenceArea="no" idTarget="PasilloPlanta1" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
       </exit>
     </exits>
@@ -126,6 +129,15 @@
       <exit rectangular="yes" x="1908" y="148" width="140" height="554" hasInfluenceArea="no" idTarget="ClasePlástico" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
       </exit>
+      <exit rectangular="yes" x="526" y="332" width="184" height="148" hasInfluenceArea="no" idTarget="PasilloPlanta0" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
+      <exit rectangular="yes" x="1311" y="332" width="184" height="148" hasInfluenceArea="no" idTarget="PasilloPlanta0" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
+      <exit rectangular="yes" x="826" y="44" width="363" height="468" hasInfluenceArea="no" idTarget="PasilloPlanta2" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
     </exits>
   </scene>
   <scene id="PasilloPlanta2" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -144,6 +156,12 @@
       <exit rectangular="yes" x="1916" y="148" width="132" height="548" hasInfluenceArea="no" idTarget="ClasePapel" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
       </exit>
+      <exit rectangular="yes" x="1319" y="340" width="188" height="144" hasInfluenceArea="no" idTarget="PasilloPlanta1" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
+      <exit rectangular="yes" x="524" y="340" width="188" height="144" hasInfluenceArea="no" idTarget="PasilloPlanta1" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
     </exits>
   </scene>
   <scene id="Patio" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -157,7 +175,7 @@
     <default-initial-position x="400" y="450" />
     <exits>
       <exit rectangular="yes" x="-26" y="-10" width="192" height="929" hasInfluenceArea="no" idTarget="PasilloPlanta0" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" />
+        <exit-look text="" cursor-path="" sound-path="" />
       </exit>
     </exits>
   </scene>
@@ -172,7 +190,7 @@
     <default-initial-position x="400" y="450" />
     <exits>
       <exit rectangular="yes" x="1888" y="4" width="156" height="901" hasInfluenceArea="no" idTarget="PasilloPlanta0" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" />
+        <exit-look text="" cursor-path="" sound-path="" />
       </exit>
     </exits>
   </scene>
