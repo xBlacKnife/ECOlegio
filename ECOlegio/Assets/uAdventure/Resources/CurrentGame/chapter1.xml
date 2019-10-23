@@ -209,7 +209,7 @@
     </description>
     <voice name="" synthesizeAlways="no" />
   </character>
-  <scene id="ClaseOrgánico" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="ClaseOrgánico" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -248,35 +248,6 @@
       <atrezzo-ref idTarget="FondoOrganico" x="1024" y="900" scale="1" layer="0" />
     </atrezzo>
   </scene>
-  <scene id="ClaseVidrio" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
-    <documentation>
-    </documentation>
-    <resources name="No name">
-      <asset type="background" uri="assets/background/cole-aula.png" />
-    </resources>
-    <name>
-    </name>
-    <default-initial-position x="400" y="450" />
-    <exits>
-      <exit rectangular="yes" x="1803" y="179" width="128" height="493" hasInfluenceArea="no" idTarget="PasilloPlanta1" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="3" transitionTime="750" not-effects="no">
-        <exit-look text="" cursor-path="" sound-path="" />
-        <effect>
-          <play-sound uri="assets/audio/abrirPuerta.mp3" />
-          <condition />
-        </effect>
-        <post-effect>
-          <show-text x="585" y="800" frontColor="#000000FF" borderColor="#FFFFFFFF" uri="">Planta 1</show-text>
-          <condition />
-        </post-effect>
-      </exit>
-    </exits>
-    <characters>
-      <character-ref idTarget="ProfVidrio" x="821" y="574" scale="0.19" orientation="2" layer="1" hasInfluenceArea="no" />
-    </characters>
-    <atrezzo>
-      <atrezzo-ref idTarget="FondoVidrio" x="1024" y="900" scale="1" layer="0" />
-    </atrezzo>
-  </scene>
   <scene id="ClasePapel" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
@@ -311,6 +282,35 @@
     </characters>
     <atrezzo>
       <atrezzo-ref idTarget="FondoPapel" x="1024" y="900" scale="1" layer="0" />
+    </atrezzo>
+  </scene>
+  <scene id="ClaseVidrio" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/cole-aula.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="1803" y="179" width="128" height="493" hasInfluenceArea="no" idTarget="PasilloPlanta1" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="3" transitionTime="750" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+        <effect>
+          <play-sound uri="assets/audio/abrirPuerta.mp3" />
+          <condition />
+        </effect>
+        <post-effect>
+          <show-text x="585" y="800" frontColor="#000000FF" borderColor="#FFFFFFFF" uri="">Planta 1</show-text>
+          <condition />
+        </post-effect>
+      </exit>
+    </exits>
+    <characters>
+      <character-ref idTarget="ProfVidrio" x="821" y="574" scale="0.19" orientation="2" layer="1" hasInfluenceArea="no" />
+    </characters>
+    <atrezzo>
+      <atrezzo-ref idTarget="FondoVidrio" x="1024" y="900" scale="1" layer="0" />
     </atrezzo>
   </scene>
   <scene id="ClasePlástico" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -509,6 +509,24 @@
       </exit>
     </exits>
   </scene>
+  <scene id="Menu" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/menu-principal.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="1580" y="564" width="200" height="200" hasInfluenceArea="no" idTarget="ClaseOrgánico" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="5" transitionTime="750" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
+    </exits>
+    <atrezzo>
+      <atrezzo-ref idTarget="BotonPlay" x="960" y="1080" scale="1" layer="0" />
+    </atrezzo>
+  </scene>
   <object id="PlatanoItem" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
       <asset type="image" uri="assets/image/banana.png" />
@@ -576,6 +594,20 @@
   <atrezzoobject id="FondoPlastico">
     <resources name="No name">
       <asset type="image" uri="assets/image/cole-aula-plastico.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="BotonPlay">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/boton-de-jugar.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>

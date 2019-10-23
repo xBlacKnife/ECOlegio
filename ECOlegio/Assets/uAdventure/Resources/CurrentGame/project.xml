@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 <comment> Project Configuration </comment>
-<entry key="Chapter0.ClaseVidrio.X">321</entry>
-<entry key="Chapter0.ClaseVidrio.Y">380</entry>
-<entry key="Chapter0.ClaseOrgánico.X">0</entry>
-<entry key="Chapter0.ClaseOrgánico.Y">501</entry>
-<entry key="Chapter0.ClasePapel.X">321</entry>
-<entry key="Chapter0.ClasePapel.Y">501</entry>
-<entry key="Chapter0.ClasePlástico.X">643</entry>
-<entry key="Chapter0.ClasePlástico.Y">380</entry>
-<entry key="Chapter0.PasilloPlanta0.X">455</entry>
-<entry key="Chapter0.PasilloPlanta0.Y">114</entry>
-<entry key="Chapter0.PasilloPlanta1.X">482</entry>
-<entry key="Chapter0.PasilloPlanta1.Y">243</entry>
-<entry key="Chapter0.PasilloPlanta2.X">160</entry>
-<entry key="Chapter0.PasilloPlanta2.Y">372</entry>
-<entry key="Chapter0.Patio.X">616</entry>
-<entry key="Chapter0.Patio.Y">0</entry>
-<entry key="Chapter0.Cafetería.X">294</entry>
-<entry key="Chapter0.Cafetería.Y">250</entry>
+<entry key="Chapter0.ClaseVidrio.X">0</entry>
+<entry key="Chapter0.ClaseVidrio.Y">420</entry>
+<entry key="Chapter0.ClaseOrgánico.X">-199</entry>
+<entry key="Chapter0.ClaseOrgánico.Y">388</entry>
+<entry key="Chapter0.ClasePapel.X">29</entry>
+<entry key="Chapter0.ClasePapel.Y">400</entry>
+<entry key="Chapter0.ClasePlástico.X">-8</entry>
+<entry key="Chapter0.ClasePlástico.Y">368</entry>
+<entry key="Chapter0.PasilloPlanta0.X">184</entry>
+<entry key="Chapter0.PasilloPlanta0.Y">512</entry>
+<entry key="Chapter0.PasilloPlanta1.X">-416</entry>
+<entry key="Chapter0.PasilloPlanta1.Y">312</entry>
+<entry key="Chapter0.PasilloPlanta2.X">-199</entry>
+<entry key="Chapter0.PasilloPlanta2.Y">316</entry>
+<entry key="Chapter0.Patio.X">292</entry>
+<entry key="Chapter0.Patio.Y">430</entry>
+<entry key="Chapter0.Cafetería.X">522</entry>
+<entry key="Chapter0.Cafetería.Y">457</entry>
+<entry key="Chapter0.Menu.X">328</entry>
+<entry key="Chapter0.Menu.Y">393</entry>
 </properties>
