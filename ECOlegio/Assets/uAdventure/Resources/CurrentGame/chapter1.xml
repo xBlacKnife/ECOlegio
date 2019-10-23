@@ -80,7 +80,7 @@
       <asset type="walkright" uri="assets/special/EmptyAnimation" />
       <asset type="walkleft" uri="assets/special/EmptyAnimation" />
     </resources>
-    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#007418" bubbleBorderColor="#00320A">
       <frontcolor color="#FFFFFF" />
       <bordercolor color="#000000" />
     </textcolor>
@@ -93,6 +93,14 @@
       </detailed>
     </description>
     <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-conversation idTarget="ExplicacionProfOrganico" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
   </character>
   <character id="ProfOrganico">
     <resources name="No name">
@@ -111,7 +119,7 @@
       <asset type="walkright" uri="assets/special/EmptyAnimation" />
       <asset type="walkleft" uri="assets/special/EmptyAnimation" />
     </resources>
-    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+    <textcolor showsSpeechBubble="yes" bubbleBkgColor="#8C4800" bubbleBorderColor="#452300">
       <frontcolor color="#FFFFFF" />
       <bordercolor color="#000000" />
     </textcolor>
@@ -124,6 +132,20 @@
       </detailed>
     </description>
     <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-conversation idTarget="ExplicacionProfOrganico" />
+          <condition>
+            <inactive flag="claseOrganicoFin" />
+          </condition>
+          <activate flag="claseOrganicoFin" />
+          <condition />
+          <play-sound background="no" uri="assets/audio/timbre.mp3" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
   </character>
   <character id="ProfPlastico">
     <resources name="No name">
@@ -142,7 +164,7 @@
       <asset type="walkright" uri="assets/special/EmptyAnimation" />
       <asset type="walkleft" uri="assets/special/EmptyAnimation" />
     </resources>
-    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#91A100" bubbleBorderColor="#424900">
       <frontcolor color="#FFFFFF" />
       <bordercolor color="#000000" />
     </textcolor>
@@ -173,7 +195,7 @@
       <asset type="walkright" uri="assets/special/EmptyAnimation" />
       <asset type="walkleft" uri="assets/special/EmptyAnimation" />
     </resources>
-    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+    <textcolor showsSpeechBubble="yes" bubbleBkgColor="#0090A5" bubbleBorderColor="#003E47">
       <frontcolor color="#FFFFFF" />
       <bordercolor color="#000000" />
     </textcolor>
@@ -198,8 +220,25 @@
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="1801" y="160" width="136" height="527" hasInfluenceArea="no" idTarget="PasilloPlanta2" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="1801" y="160" width="136" height="527" hasInfluenceArea="no" idTarget="PasilloPlanta2" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="3" transitionTime="750" not-effects="yes">
         <exit-look text="" cursor-path="" sound-path="" />
+        <condition>
+          <active flag="claseOrganicoFin" />
+        </condition>
+        <effect>
+          <play-sound uri="assets/audio/abrirPuerta.mp3" />
+          <condition />
+        </effect>
+        <post-effect>
+          <show-text x="585" y="800" frontColor="#000000FF" borderColor="#FFFFFFFF" uri="">Planta 2</show-text>
+          <condition />
+        </post-effect>
+        <not-effect>
+          <show-text x="1024" y="900" frontColor="#FF0000FF" borderColor="#FFFFFFFF" uri="">Aún no ha terminado la clase.</show-text>
+          <condition>
+            <inactive flag="claseOrganicoFin" />
+          </condition>
+        </not-effect>
       </exit>
     </exits>
     <characters>
@@ -219,8 +258,16 @@
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="1803" y="179" width="128" height="493" hasInfluenceArea="no" idTarget="PasilloPlanta1" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="1803" y="179" width="128" height="493" hasInfluenceArea="no" idTarget="PasilloPlanta1" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="3" transitionTime="750" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
+        <effect>
+          <play-sound uri="assets/audio/abrirPuerta.mp3" />
+          <condition />
+        </effect>
+        <post-effect>
+          <show-text x="585" y="800" frontColor="#000000FF" borderColor="#FFFFFFFF" uri="">Planta 1</show-text>
+          <condition />
+        </post-effect>
       </exit>
     </exits>
     <characters>
@@ -240,8 +287,23 @@
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="120" y="168" width="128" height="516" hasInfluenceArea="no" idTarget="PasilloPlanta2" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="120" y="168" width="128" height="516" hasInfluenceArea="no" idTarget="PasilloPlanta2" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="4" transitionTime="750" not-effects="yes">
         <exit-look text="" cursor-path="" sound-path="" />
+        <condition>
+          <active flag="calsePapelFin" />
+        </condition>
+        <effect>
+          <play-sound uri="assets/audio/abrirPuerta.mp3" />
+          <condition />
+        </effect>
+        <post-effect>
+          <show-text x="585" y="800" frontColor="#000000FF" borderColor="#FFFFFFFF" uri="">Planta 2</show-text>
+          <condition />
+        </post-effect>
+        <not-effect>
+          <show-text x="300" y="900" frontColor="#FF0000FF" borderColor="#FFFFFFFF" uri="">Aún no ha terminado la clase.</show-text>
+          <condition />
+        </not-effect>
       </exit>
     </exits>
     <characters>
@@ -261,8 +323,16 @@
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="116" y="176" width="140" height="492" hasInfluenceArea="no" idTarget="PasilloPlanta1" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="116" y="176" width="140" height="492" hasInfluenceArea="no" idTarget="PasilloPlanta1" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="4" transitionTime="750" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
+        <effect>
+          <play-sound uri="assets/audio/abrirPuerta.mp3" />
+          <condition />
+        </effect>
+        <post-effect>
+          <show-text x="585" y="800" frontColor="#000000FF" borderColor="#FFFFFFFF" uri="">Planta 1</show-text>
+          <condition />
+        </post-effect>
       </exit>
     </exits>
     <characters>
@@ -277,13 +347,18 @@
     </documentation>
     <resources name="No name">
       <asset type="background" uri="assets/background/cole-patio.png" />
+      <asset type="bgmusic" uri="assets/audio/patio.mp3" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="-26" y="-10" width="192" height="929" hasInfluenceArea="no" idTarget="PasilloPlanta0" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="-26" y="-10" width="192" height="929" hasInfluenceArea="no" idTarget="PasilloPlanta0" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="5" transitionTime="750" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
+        <post-effect>
+          <show-text x="585" y="800" frontColor="#000000FF" borderColor="#FFFFFFFF" uri="">Planta 0</show-text>
+          <condition />
+        </post-effect>
       </exit>
     </exits>
     <objects>
@@ -298,19 +373,24 @@
     </documentation>
     <resources name="No name">
       <asset type="background" uri="assets/background/cole-pasillo.png" />
+      <asset type="bgmusic" uri="assets/audio/pasillo.mp3" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="1905" y="155" width="144" height="554" hasInfluenceArea="no" idTarget="Patio" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="1905" y="155" width="144" height="554" hasInfluenceArea="no" idTarget="Patio" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="5" transitionTime="750" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
       </exit>
-      <exit rectangular="yes" x="4" y="136" width="128" height="576" hasInfluenceArea="no" idTarget="Cafetería" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="4" y="136" width="128" height="576" hasInfluenceArea="no" idTarget="Cafetería" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="4" transitionTime="750" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
       </exit>
-      <exit rectangular="yes" x="822" y="20" width="364" height="494" hasInfluenceArea="no" idTarget="PasilloPlanta1" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="822" y="20" width="364" height="494" hasInfluenceArea="no" idTarget="PasilloPlanta1" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="1" transitionTime="750" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
+        <post-effect>
+          <show-text x="585" y="800" frontColor="#000000FF" borderColor="#FFFFFFFF" uri="">Planta 1</show-text>
+          <condition />
+        </post-effect>
       </exit>
     </exits>
   </scene>
@@ -319,25 +399,46 @@
     </documentation>
     <resources name="No name">
       <asset type="background" uri="assets/background/cole-pasillo.png" />
+      <asset type="bgmusic" uri="assets/audio/pasillo.mp3" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="2" y="148" width="124" height="552" hasInfluenceArea="no" idTarget="ClaseVidrio" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="2" y="148" width="124" height="552" hasInfluenceArea="no" idTarget="ClaseVidrio" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="4" transitionTime="750" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
+        <effect>
+          <play-sound uri="assets/audio/cerrarPuerta.mp3" />
+          <condition />
+        </effect>
       </exit>
-      <exit rectangular="yes" x="1908" y="148" width="140" height="554" hasInfluenceArea="no" idTarget="ClasePlástico" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="1908" y="148" width="140" height="554" hasInfluenceArea="no" idTarget="ClasePlástico" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="3" transitionTime="750" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
+        <effect>
+          <play-sound uri="assets/audio/cerrarPuerta.mp3" />
+          <condition />
+        </effect>
       </exit>
-      <exit rectangular="yes" x="526" y="332" width="184" height="148" hasInfluenceArea="no" idTarget="PasilloPlanta0" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="524" y="334" width="184" height="148" hasInfluenceArea="no" idTarget="PasilloPlanta0" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="2" transitionTime="750" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
+        <post-effect>
+          <show-text x="585" y="800" frontColor="#000000FF" borderColor="#FFFFFFFF" uri="">Planta 0</show-text>
+          <condition />
+        </post-effect>
       </exit>
-      <exit rectangular="yes" x="1311" y="332" width="184" height="148" hasInfluenceArea="no" idTarget="PasilloPlanta0" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="1311" y="332" width="184" height="148" hasInfluenceArea="no" idTarget="PasilloPlanta0" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="2" transitionTime="750" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
+        <post-effect>
+          <show-text x="585" y="800" frontColor="#000000FF" borderColor="#FFFFFFFF" uri="">Planta 0</show-text>
+          <condition />
+        </post-effect>
       </exit>
-      <exit rectangular="yes" x="826" y="44" width="363" height="468" hasInfluenceArea="no" idTarget="PasilloPlanta2" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="828" y="44" width="363" height="468" hasInfluenceArea="no" idTarget="PasilloPlanta2" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="1" transitionTime="750" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
+        <post-effect>
+          <show-text x="585" y="800" frontColor="#000000FF" borderColor="#FFFFFFFF" uri="">Planta 2</show-text>
+          <condition />
+        </post-effect>
       </exit>
     </exits>
   </scene>
@@ -346,22 +447,45 @@
     </documentation>
     <resources name="No name">
       <asset type="background" uri="assets/background/cole-pasillo.png" />
+      <asset type="bgmusic" uri="assets/audio/pasillo.mp3" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="0" y="148" width="132" height="559" hasInfluenceArea="no" idTarget="ClaseOrgánico" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="0" y="148" width="132" height="559" hasInfluenceArea="no" idTarget="ClaseOrgánico" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="4" transitionTime="750" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
+        <effect>
+          <play-sound uri="assets/audio/cerrarPuerta.mp3" />
+          <condition />
+        </effect>
       </exit>
-      <exit rectangular="yes" x="1916" y="148" width="132" height="548" hasInfluenceArea="no" idTarget="ClasePapel" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="1916" y="148" width="132" height="548" hasInfluenceArea="no" idTarget="ClasePapel" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="3" transitionTime="750" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
+        <effect>
+          <play-sound uri="assets/audio/cerrarPuerta.mp3" />
+          <condition />
+        </effect>
+        <post-effect>
+          <trigger-conversation idTarget="ExplicacionProfPapel" />
+          <condition />
+          <activate flag="calsePapelFin" />
+          <condition />
+        </post-effect>
       </exit>
-      <exit rectangular="yes" x="1319" y="340" width="188" height="144" hasInfluenceArea="no" idTarget="PasilloPlanta1" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="1319" y="340" width="188" height="144" hasInfluenceArea="no" idTarget="PasilloPlanta1" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="2" transitionTime="750" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
+        <post-effect>
+          <show-text x="585" y="800" frontColor="#000000FF" borderColor="#FFFFFFFF" uri="">Planta 1</show-text>
+          <condition />
+        </post-effect>
       </exit>
-      <exit rectangular="yes" x="524" y="340" width="188" height="144" hasInfluenceArea="no" idTarget="PasilloPlanta1" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="524" y="340" width="188" height="144" hasInfluenceArea="no" idTarget="PasilloPlanta1" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="2" transitionTime="750" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
+        <post-effect>
+          <show-text x="585" y="800" frontColor="#000000FF" borderColor="#FFFFFFFF" uri="">Planta 1</show-text>
+          <condition />
+        </post-effect>
       </exit>
     </exits>
   </scene>
@@ -370,13 +494,18 @@
     </documentation>
     <resources name="No name">
       <asset type="background" uri="assets/background/burger.png" />
+      <asset type="bgmusic" uri="assets/audio/cafeteria.mp3" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="1888" y="4" width="156" height="901" hasInfluenceArea="no" idTarget="PasilloPlanta0" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="1888" y="4" width="156" height="901" hasInfluenceArea="no" idTarget="PasilloPlanta0" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="3" transitionTime="750" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
+        <post-effect>
+          <show-text x="585" y="800" frontColor="#000000FF" borderColor="#FFFFFFFF" uri="">Planta 0</show-text>
+          <condition />
+        </post-effect>
       </exit>
     </exits>
   </scene>
@@ -458,4 +587,22 @@
       </detailed>
     </description>
   </atrezzoobject>
+  <graph-conversation id="ExplicacionProfOrganico">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="ProfOrganico">Hola esta es la clase sobre la basura orgánica.</speak-char>
+      <condition />
+      <speak-char idTarget="ProfOrganico">Hemos acabado la clase.</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="ExplicacionProfPapel">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="ProfPapel">Esta es la clase sobre el papel y el cartón.</speak-char>
+      <condition />
+      <speak-char idTarget="ProfPapel">Hasta el próximo día.</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
 </eAdventure>
