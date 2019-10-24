@@ -540,10 +540,23 @@
           <condition />
         </post-effect>
       </exit>
+      <exit rectangular="yes" x="1111" y="65" width="321" height="329" hasInfluenceArea="no" idTarget="NotasFinales" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
     </exits>
     <atrezzo>
       <atrezzo-ref idTarget="BotonPlay" x="960" y="1080" scale="1" layer="0" />
     </atrezzo>
+  </scene>
+  <scene id="NotasFinales" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/notaFinal.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
   </scene>
   <object id="PlatanoItem" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
