@@ -89,7 +89,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224377089987562612}
   - component: {fileID: 114885993838501964}
-  - component: {fileID: 114747194756174784}
+  - component: {fileID: 114141935382014650}
   m_Layer: 5
   m_Name: Inventory
   m_TagString: Untagged
@@ -221,6 +221,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114141935382014650
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1445526389125804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68ac27e338f66ab43a99536e21aaf415, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114198664134576154
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -577,17 +588,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 0
   m_VerticalFit: 2
---- !u!114 &114747194756174784
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1445526389125804}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1924d775ce3398e41a9342b0d67fbbee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114832213226236100
 MonoBehaviour:
   m_ObjectHideFlags: 1
