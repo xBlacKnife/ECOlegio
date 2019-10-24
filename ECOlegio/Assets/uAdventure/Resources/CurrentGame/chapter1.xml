@@ -93,14 +93,6 @@
       </detailed>
     </description>
     <voice name="" synthesizeAlways="no" />
-    <actions>
-      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
-        <effect>
-          <trigger-conversation idTarget="ExplicacionProfOrganico" />
-          <condition />
-        </effect>
-      </talk-to>
-    </actions>
   </character>
   <character id="ProfOrganico">
     <resources name="No name">
@@ -132,20 +124,6 @@
       </detailed>
     </description>
     <voice name="" synthesizeAlways="no" />
-    <actions>
-      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
-        <effect>
-          <trigger-conversation idTarget="ExplicacionProfOrganico" />
-          <condition>
-            <inactive flag="claseOrganicoFin" />
-          </condition>
-          <activate flag="claseOrganicoFin" />
-          <condition />
-          <play-sound background="no" uri="assets/audio/timbre.mp3" />
-          <condition />
-        </effect>
-      </talk-to>
-    </actions>
   </character>
   <character id="ProfPlastico">
     <resources name="No name">
@@ -261,7 +239,7 @@
       <exit rectangular="yes" x="120" y="168" width="128" height="516" hasInfluenceArea="no" idTarget="PasilloPlanta2" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="4" transitionTime="750" not-effects="yes">
         <exit-look text="" cursor-path="" sound-path="" />
         <condition>
-          <active flag="calsePapelFin" />
+          <active flag="clasePapelFin" />
         </condition>
         <effect>
           <play-sound uri="assets/audio/abrirPuerta.mp3" />
@@ -271,10 +249,6 @@
           <show-text x="585" y="800" frontColor="#000000FF" borderColor="#FFFFFFFF" uri="">Planta 2</show-text>
           <condition />
         </post-effect>
-        <not-effect>
-          <show-text x="300" y="900" frontColor="#FF0000FF" borderColor="#FFFFFFFF" uri="">Aún no ha terminado la clase.</show-text>
-          <condition />
-        </not-effect>
       </exit>
     </exits>
     <characters>
@@ -296,6 +270,9 @@
     <exits>
       <exit rectangular="yes" x="1803" y="179" width="128" height="493" hasInfluenceArea="no" idTarget="PasilloPlanta1" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="3" transitionTime="750" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
+        <condition>
+          <active flag="claseVidrioFin" />
+        </condition>
         <effect>
           <play-sound uri="assets/audio/abrirPuerta.mp3" />
           <condition />
@@ -325,6 +302,9 @@
     <exits>
       <exit rectangular="yes" x="116" y="176" width="140" height="492" hasInfluenceArea="no" idTarget="PasilloPlanta1" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="4" transitionTime="750" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
+        <condition>
+          <active flag="clasePlasticoFin" />
+        </condition>
         <effect>
           <play-sound uri="assets/audio/abrirPuerta.mp3" />
           <condition />
@@ -342,7 +322,7 @@
       <atrezzo-ref idTarget="FondoPlastico" x="1024" y="900" scale="1" layer="0" />
     </atrezzo>
   </scene>
-  <scene id="Patio" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Patio" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -410,14 +390,38 @@
         <effect>
           <play-sound uri="assets/audio/cerrarPuerta.mp3" />
           <condition />
+          <play-sound uri="assets/audio/escribirPizarra.mp3" />
+          <condition>
+            <inactive flag="claseVidrioFin" />
+          </condition>
         </effect>
+        <post-effect>
+          <trigger-conversation idTarget="ExplicacionProfVidrio" />
+          <condition>
+            <inactive flag="claseVidrioFin" />
+          </condition>
+          <activate flag="claseVidrioFin" />
+          <condition />
+        </post-effect>
       </exit>
       <exit rectangular="yes" x="1908" y="148" width="140" height="554" hasInfluenceArea="no" idTarget="ClasePlástico" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="3" transitionTime="750" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
         <effect>
           <play-sound uri="assets/audio/cerrarPuerta.mp3" />
           <condition />
+          <play-sound uri="assets/audio/escribirPizarra.mp3" />
+          <condition>
+            <inactive flag="clasePlasticoFin" />
+          </condition>
         </effect>
+        <post-effect>
+          <trigger-conversation idTarget="ExplicacionProPlastico" />
+          <condition>
+            <inactive flag="clasePlasticoFin" />
+          </condition>
+          <activate flag="clasePlasticoFin" />
+          <condition />
+        </post-effect>
       </exit>
       <exit rectangular="yes" x="524" y="334" width="184" height="148" hasInfluenceArea="no" idTarget="PasilloPlanta0" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="2" transitionTime="750" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
@@ -465,11 +469,17 @@
         <effect>
           <play-sound uri="assets/audio/cerrarPuerta.mp3" />
           <condition />
+          <play-sound uri="assets/audio/escribirPizarra.mp3" />
+          <condition>
+            <inactive flag="clasePapelFin" />
+          </condition>
         </effect>
         <post-effect>
           <trigger-conversation idTarget="ExplicacionProfPapel" />
-          <condition />
-          <activate flag="calsePapelFin" />
+          <condition>
+            <inactive flag="clasePapelFin" />
+          </condition>
+          <activate flag="clasePapelFin" />
           <condition />
         </post-effect>
       </exit>
@@ -509,7 +519,7 @@
       </exit>
     </exits>
   </scene>
-  <scene id="Menu" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Menu" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -519,8 +529,16 @@
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="1580" y="564" width="200" height="200" hasInfluenceArea="no" idTarget="ClaseOrgánico" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="5" transitionTime="750" not-effects="no">
+      <exit rectangular="yes" x="1580" y="564" width="200" height="200" hasInfluenceArea="no" idTarget="EmpiezaColegio" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="5" transitionTime="750" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
+        <post-effect>
+          <play-sound background="no" uri="assets/audio/escribirPizarra.mp3" />
+          <condition />
+          <trigger-conversation idTarget="ExplicacionProfOrganico" />
+          <condition />
+          <activate flag="claseOrganicoFin" />
+          <condition />
+        </post-effect>
       </exit>
     </exits>
     <atrezzo>
@@ -541,12 +559,20 @@
       </detailed>
     </description>
     <actions>
-      <drag-to idTarget="ContenedorNPC" needsGoTo="no" keepDistance="0" not-effects="no">
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
         <effect>
           <remove-element idTarget="PlatanoItem" />
           <condition />
+          <generate-object idTarget="PlatanoItem" />
+          <condition />
         </effect>
-      </drag-to>
+      </grab>
+      <give-to idTarget="ContenedorNPC" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <consume-object idTarget="PlatanoItem" />
+          <condition />
+        </effect>
+      </give-to>
     </actions>
   </object>
   <atrezzoobject id="FondoOrganico">
@@ -637,4 +663,31 @@
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
+  <graph-conversation id="ExplicacionProfVidrio">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="ProfVidrio">Esta es la clase de los vidrios.</speak-char>
+      <condition />
+      <speak-char idTarget="ProfVidrio">Hasta mañana y recordad reciclar.</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="ExplicacionProPlastico">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="ProfPlastico">Los plásticos son muy malos para los pececitos.</speak-char>
+      <condition />
+      <speak-char idTarget="ProfPlastico">Pasadlo bien el fin de semana!</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <slidescene id="EmpiezaColegio" start="no" idTarget="ClaseOrgánico" destinyX="-2147483648" destinyY="-2147483648" transitionTime="750" transitionType="5" next="new-scene" class="accesible" type="cutscene">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="slides" uri="assets/animation/CutsceneEmpiezaColegio.eaa.xml" />
+    </resources>
+    <name>
+    </name>
+  </slidescene>
 </eAdventure>
