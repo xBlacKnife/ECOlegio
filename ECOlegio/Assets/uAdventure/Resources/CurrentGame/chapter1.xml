@@ -322,7 +322,7 @@
       <atrezzo-ref idTarget="FondoPlastico" x="1024" y="900" scale="1" layer="0" />
     </atrezzo>
   </scene>
-  <scene id="Patio" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Patio" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -519,7 +519,7 @@
       </exit>
     </exits>
   </scene>
-  <scene id="Menu" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Menu" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -570,6 +570,8 @@
       <give-to idTarget="ContenedorNPC" needsGoTo="yes" keepDistance="35" not-effects="no">
         <effect>
           <consume-object idTarget="PlatanoItem" />
+          <condition />
+          <increment var="score" value="5" />
           <condition />
         </effect>
       </give-to>
