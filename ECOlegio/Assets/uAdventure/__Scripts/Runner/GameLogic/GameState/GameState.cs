@@ -178,6 +178,10 @@ namespace uAdventure.Runner
             return ret;
         }
 
+        public Dictionary<string, int> GetFlags()
+        {
+            return varFlags;
+        }
         public void SetFlag(string name, int state)
         {
             varFlags["flag_" + name] = state;

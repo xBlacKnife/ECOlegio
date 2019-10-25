@@ -34,7 +34,6 @@ public class PlayerName : MonoBehaviour {
     void Update()
     {
         ActiveInput();
-        Debug.Log(nameText_.GetComponent<Text>().text);
         ActiveText();
     }
 

@@ -164,7 +164,7 @@ namespace uAdventure.Runner
                     holder = new Texture2DHolder(defaultPath(uri), type);
                     if (holder.Loaded())
                     {
-                        Debug.Log(uri + " loaded from defaults...");
+                        //Debug.Log(uri + " loaded from defaults...");
                         images.Add(uri, holder);
                         return holder.Texture;
                     }

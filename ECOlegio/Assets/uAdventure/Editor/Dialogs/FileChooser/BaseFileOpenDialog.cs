@@ -117,6 +117,7 @@ public abstract class BaseFileOpenDialog : EditorWindow
 
         public virtual void Init(DialogReceiverInterface e, FileType fType)
         {
+            Debug.Log("Dialogo empezado.");
             reference = e;
             fileType = fType;
 

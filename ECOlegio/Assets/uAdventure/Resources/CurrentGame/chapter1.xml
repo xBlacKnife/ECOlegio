@@ -394,6 +394,10 @@
           <condition>
             <inactive flag="claseVidrioFin" />
           </condition>
+          <deactivate flag="conversacionInactiva" />
+          <condition>
+            <inactive flag="claseVidrioFin" />
+          </condition>
         </effect>
         <post-effect>
           <trigger-conversation idTarget="ExplicacionProfVidrio" />
@@ -401,6 +405,8 @@
             <inactive flag="claseVidrioFin" />
           </condition>
           <activate flag="claseVidrioFin" />
+          <condition />
+          <activate flag="conversacionInactiva" />
           <condition />
         </post-effect>
       </exit>
@@ -413,6 +419,10 @@
           <condition>
             <inactive flag="clasePlasticoFin" />
           </condition>
+          <deactivate flag="conversacionInactiva" />
+          <condition>
+            <inactive flag="clasePlasticoFin" />
+          </condition>
         </effect>
         <post-effect>
           <trigger-conversation idTarget="ExplicacionProPlastico" />
@@ -420,6 +430,8 @@
             <inactive flag="clasePlasticoFin" />
           </condition>
           <activate flag="clasePlasticoFin" />
+          <condition />
+          <activate flag="conversacionInactiva" />
           <condition />
         </post-effect>
       </exit>
@@ -473,6 +485,10 @@
           <condition>
             <inactive flag="clasePapelFin" />
           </condition>
+          <deactivate flag="conversacionInactiva" />
+          <condition>
+            <inactive flag="clasePapelFin" />
+          </condition>
         </effect>
         <post-effect>
           <trigger-conversation idTarget="ExplicacionProfPapel" />
@@ -480,6 +496,8 @@
             <inactive flag="clasePapelFin" />
           </condition>
           <activate flag="clasePapelFin" />
+          <condition />
+          <activate flag="conversacionInactiva" />
           <condition />
         </post-effect>
       </exit>
@@ -537,6 +555,8 @@
           <trigger-conversation idTarget="ExplicacionProfOrganico" />
           <condition />
           <activate flag="claseOrganicoFin" />
+          <condition />
+          <activate flag="conversacionInactiva" />
           <condition />
         </post-effect>
       </exit>
@@ -661,7 +681,7 @@
     </description>
   </atrezzoobject>
   <graph-conversation id="ExplicacionProfOrganico">
-    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+    <dialogue-node nodeindex="0" editor-x="376" editor-y="70">
       <speak-char idTarget="ProfOrganico">Hola esta es la clase sobre la basura orgánica.</speak-char>
       <condition />
       <speak-char idTarget="ProfOrganico">Hemos acabado la clase.</speak-char>
@@ -705,4 +725,18 @@
     <name>
     </name>
   </slidescene>
+  <timer time="10" usesEndCondition="yes" multipleStarts="yes" runsInLoop="no" showTime="yes" displayName="Tiempo" countDown="yes" showWhenStopped="no">
+    <init-condition>
+      <active flag="conversacionInactiva" />
+    </init-condition>
+    <end-condition>
+      <inactive flag="conversacionInactiva" />
+    </end-condition>
+    <effect>
+      <deactivate flag="conversacionInactiva" />
+      <condition />
+      <trigger-scene idTarget="NotasFinales" x="960" y="810" transitionTime="750" transitionType="5" />
+      <condition />
+    </effect>
+  </timer>
 </eAdventure>

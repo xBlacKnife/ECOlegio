@@ -246,5 +246,10 @@ namespace uAdventure.Runner
         {
             return runningTimers.ContainsKey(t);
         }
+
+        public Dictionary<Timer, TimerVars> GetTimerVars()
+        {
+            return runningTimers;
+        }
     }
 }

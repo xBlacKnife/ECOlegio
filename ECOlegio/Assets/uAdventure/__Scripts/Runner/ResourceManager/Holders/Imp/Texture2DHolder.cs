@@ -96,7 +96,7 @@ namespace uAdventure.Runner
                     if (tex == null)
                     {
                         loaded = false;
-                        Debug.Log("No se pudo cargar: " + this.path);
+                        //Debug.Log("No se pudo cargar: " + this.path);
                     }
                     else
                         loaded = true;
