@@ -93,6 +93,39 @@
       </detailed>
     </description>
     <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <inactive flag="profVidrioDialogo1Fin" />
+        </condition>
+        <effect>
+          <deactivate flag="conversacionInactiva" />
+          <condition />
+          <trigger-conversation idTarget="ProfVidrioDialogo1" />
+          <condition />
+          <activate flag="profVidrioDialogo1Fin" />
+          <condition />
+          <activate flag="conversacionInactiva" />
+          <condition />
+        </effect>
+      </talk-to>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profVidrioDialogo1Fin" />
+          <inactive flag="profVidrioDialogo2Fin" />
+        </condition>
+        <effect>
+          <deactivate flag="conversacionInactiva" />
+          <condition />
+          <trigger-conversation idTarget="ProfVidrioDialogo2" />
+          <condition />
+          <activate flag="profVidrioDialogo2Fin" />
+          <condition />
+          <activate flag="conversacionInactiva" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
   </character>
   <character id="ProfOrganico">
     <resources name="No name">
@@ -124,6 +157,20 @@
       </detailed>
     </description>
     <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <deactivate flag="conversacionInactiva" />
+          <condition />
+          <trigger-conversation idTarget="ProfOrganicoDialogo2" />
+          <condition />
+          <activate flag="conversacionInactiva" />
+          <condition />
+          <activate flag="profOrganicoDialogo2Fin" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
   </character>
   <character id="ProfPlastico">
     <resources name="No name">
@@ -142,7 +189,7 @@
       <asset type="walkright" uri="assets/special/EmptyAnimation" />
       <asset type="walkleft" uri="assets/special/EmptyAnimation" />
     </resources>
-    <textcolor showsSpeechBubble="no" bubbleBkgColor="#91A100" bubbleBorderColor="#424900">
+    <textcolor showsSpeechBubble="yes" bubbleBkgColor="#D3AA00" bubbleBorderColor="#7B6300">
       <frontcolor color="#FFFFFF" />
       <bordercolor color="#000000" />
     </textcolor>
@@ -155,6 +202,23 @@
       </detailed>
     </description>
     <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPlasticoDialogo1Fin" />
+        </condition>
+        <effect>
+          <deactivate flag="conversacionInactiva" />
+          <condition />
+          <trigger-conversation idTarget="ProfPlasticoDialogo2" />
+          <condition />
+          <activate flag="profPlasticoDialogo2Fin" />
+          <condition />
+          <activate flag="conversacionInactiva" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
   </character>
   <character id="ProfPapel">
     <resources name="No name">
@@ -186,6 +250,23 @@
       </detailed>
     </description>
     <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPapelDialogo1Fin" />
+        </condition>
+        <effect>
+          <deactivate flag="conversacionInactiva" />
+          <condition />
+          <trigger-conversation idTarget="ProfPapelDialogo2" />
+          <condition />
+          <activate flag="profPapelDialogo2Fin" />
+          <condition />
+          <activate flag="conversacionInactiva" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
   </character>
   <scene id="ClaseOrgánico" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
@@ -198,12 +279,20 @@
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="1801" y="160" width="136" height="527" hasInfluenceArea="no" idTarget="PasilloPlanta2" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="3" transitionTime="750" not-effects="yes">
+      <exit rectangular="yes" x="1798" y="157" width="136" height="527" hasInfluenceArea="no" idTarget="PasilloPlanta2" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="3" transitionTime="750" not-effects="yes">
         <exit-look text="" cursor-path="" sound-path="" />
         <condition>
-          <active flag="claseOrganicoFin" />
+          <active flag="profPapelDialogo2Fin" />
         </condition>
         <effect>
+          <deactivate flag="conversacionInactiva" />
+          <condition>
+            <inactive flag="finTutorial" />
+          </condition>
+          <trigger-cutscene idTarget="FinTutorial" />
+          <condition>
+            <inactive flag="finTutorial" />
+          </condition>
           <play-sound uri="assets/audio/abrirPuerta.mp3" />
           <condition />
         </effect>
@@ -239,7 +328,7 @@
       <exit rectangular="yes" x="120" y="168" width="128" height="516" hasInfluenceArea="no" idTarget="PasilloPlanta2" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="4" transitionTime="750" not-effects="yes">
         <exit-look text="" cursor-path="" sound-path="" />
         <condition>
-          <active flag="clasePapelFin" />
+          <active flag="profPapelDialogo1Fin" />
         </condition>
         <effect>
           <play-sound uri="assets/audio/abrirPuerta.mp3" />
@@ -270,9 +359,6 @@
     <exits>
       <exit rectangular="yes" x="1803" y="179" width="128" height="493" hasInfluenceArea="no" idTarget="PasilloPlanta1" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="3" transitionTime="750" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
-        <condition>
-          <active flag="claseVidrioFin" />
-        </condition>
         <effect>
           <play-sound uri="assets/audio/abrirPuerta.mp3" />
           <condition />
@@ -303,7 +389,7 @@
       <exit rectangular="yes" x="116" y="176" width="140" height="492" hasInfluenceArea="no" idTarget="PasilloPlanta1" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="4" transitionTime="750" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
         <condition>
-          <active flag="clasePlasticoFin" />
+          <active flag="profPlasticoDialogo1Fin" />
         </condition>
         <effect>
           <play-sound uri="assets/audio/abrirPuerta.mp3" />
@@ -390,25 +476,7 @@
         <effect>
           <play-sound uri="assets/audio/cerrarPuerta.mp3" />
           <condition />
-          <play-sound uri="assets/audio/escribirPizarra.mp3" />
-          <condition>
-            <inactive flag="claseVidrioFin" />
-          </condition>
-          <deactivate flag="conversacionInactiva" />
-          <condition>
-            <inactive flag="claseVidrioFin" />
-          </condition>
         </effect>
-        <post-effect>
-          <trigger-conversation idTarget="ExplicacionProfVidrio" />
-          <condition>
-            <inactive flag="claseVidrioFin" />
-          </condition>
-          <activate flag="claseVidrioFin" />
-          <condition />
-          <activate flag="conversacionInactiva" />
-          <condition />
-        </post-effect>
       </exit>
       <exit rectangular="yes" x="1908" y="148" width="140" height="554" hasInfluenceArea="no" idTarget="ClasePlástico" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="3" transitionTime="750" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
@@ -417,19 +485,19 @@
           <condition />
           <play-sound uri="assets/audio/escribirPizarra.mp3" />
           <condition>
-            <inactive flag="clasePlasticoFin" />
-          </condition>
-          <deactivate flag="conversacionInactiva" />
-          <condition>
-            <inactive flag="clasePlasticoFin" />
+            <inactive flag="profPlasticoDialogo1Fin" />
           </condition>
         </effect>
         <post-effect>
-          <trigger-conversation idTarget="ExplicacionProPlastico" />
+          <deactivate flag="conversacionInactiva" />
           <condition>
-            <inactive flag="clasePlasticoFin" />
+            <inactive flag="profPlasticoDialogo1Fin" />
           </condition>
-          <activate flag="clasePlasticoFin" />
+          <trigger-conversation idTarget="ProfPlasticoDialogo1" />
+          <condition>
+            <inactive flag="profPlasticoDialogo1Fin" />
+          </condition>
+          <activate flag="profPlasticoDialogo1Fin" />
           <condition />
           <activate flag="conversacionInactiva" />
           <condition />
@@ -483,21 +551,21 @@
           <condition />
           <play-sound uri="assets/audio/escribirPizarra.mp3" />
           <condition>
-            <inactive flag="clasePapelFin" />
-          </condition>
-          <deactivate flag="conversacionInactiva" />
-          <condition>
-            <inactive flag="clasePapelFin" />
+            <inactive flag="profPapelDialogo1Fin" />
           </condition>
         </effect>
         <post-effect>
-          <trigger-conversation idTarget="ExplicacionProfPapel" />
+          <deactivate flag="conversacionInactiva" />
           <condition>
-            <inactive flag="clasePapelFin" />
+            <inactive flag="profPapelDialogo1Fin" />
           </condition>
-          <activate flag="clasePapelFin" />
-          <condition />
+          <trigger-conversation idTarget="ProfPapelDialogo1" />
+          <condition>
+            <inactive flag="profPapelDialogo1Fin" />
+          </condition>
           <activate flag="conversacionInactiva" />
+          <condition />
+          <activate flag="profPapelDialogo1Fin" />
           <condition />
         </post-effect>
       </exit>
@@ -552,16 +620,11 @@
         <post-effect>
           <play-sound background="no" uri="assets/audio/escribirPizarra.mp3" />
           <condition />
-          <trigger-conversation idTarget="ExplicacionProfOrganico" />
+          <trigger-conversation idTarget="ProfOrganicoDialogo1" />
           <condition />
-          <activate flag="claseOrganicoFin" />
-          <condition />
-          <activate flag="conversacionInactiva" />
+          <activate flag="profOrganicoDialogo1Fin" />
           <condition />
         </post-effect>
-      </exit>
-      <exit rectangular="yes" x="1111" y="65" width="321" height="329" hasInfluenceArea="no" idTarget="NotasFinales" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" cursor-path="" sound-path="" />
       </exit>
     </exits>
     <atrezzo>
@@ -680,38 +743,359 @@
       </detailed>
     </description>
   </atrezzoobject>
-  <graph-conversation id="ExplicacionProfOrganico">
-    <dialogue-node nodeindex="0" editor-x="376" editor-y="70">
-      <speak-char idTarget="ProfOrganico">Hola esta es la clase sobre la basura orgánica.</speak-char>
+  <graph-conversation id="ProfOrganicoDialogo1">
+    <dialogue-node nodeindex="0" editor-x="95" editor-y="136">
+      <speak-char idTarget="ProfOrganico">Bueno, como ya sabéis, hoy vamos a organizar un pequeño desafío de reciclaje antes de acabar las clases.</speak-char>
       <condition />
-      <speak-char idTarget="ProfOrganico">Hemos acabado la clase.</speak-char>
+      <speak-player>¿Reciclaje? ¿Qué es eso?</speak-player>
+      <condition />
+      <speak-char idTarget="ProfOrganico">El reciclaje nos permite separar los residuos para después reutilizarlos, y así ayudar al cuidado de la tierra.</speak-char>
+      <condition />
+      <speak-char idTarget="ProfOrganico">Por lo general, hay cuatro grandes grupos de residuos a tener en cuenta…</speak-char>
+      <condition />
+      <speak-char idTarget="ProfOrganico">1. Residuos orgánicos.</speak-char>
+      <condition />
+      <speak-char idTarget="ProfOrganico">2. Papel y cartón.</speak-char>
+      <condition />
+      <speak-char idTarget="ProfOrganico">3. Envases de vidrio.</speak-char>
+      <condition />
+      <speak-char idTarget="ProfOrganico">4. Plásticos, briks y envases metálicos.</speak-char>
+      <condition />
+      <speak-player>¿Y no hay más grupos?</speak-player>
+      <condition />
+      <speak-char idTarget="ProfOrganico">¡Claro que sí! Hay deshechos que se deben depositar en los contenedores grises para restos en general</speak-char>
+      <condition />
+      <speak-char idTarget="ProfOrganico">Y también existen otros que deben ser entregados en contenedores especiales, o en un Punto Limpio.</speak-char>
+      <condition />
+      <speak-char idTarget="ProfOrganico">Residuos como pilas gastadas, artículos de limpieza y medicamentos, aparatos electrónicos, metales y más que no pueden juntarse con los otros grupos.</speak-char>
+      <condition />
+      <speak-char idTarget="ProfOrganico">Pero como esos no son muy comunes en una escuela, nosotros nos vamos a centrar en los  cuatro grupos principales.</speak-char>
+      <condition />
+      <speak-char idTarget="ProfOrganico">#! ¡Así que vamos a ello!</speak-char>
+      <condition />
+      <speak-char idTarget="ProfOrganico">Habla conmigo cuando quieras que empecemos.</speak-char>
       <condition />
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="ExplicacionProfPapel">
+  <graph-conversation id="ProfOrganicoDialogo2">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
-      <speak-char idTarget="ProfPapel">Esta es la clase sobre el papel y el cartón.</speak-char>
+      <speak-char idTarget="ProfOrganico">Como profesor de esta clase, mi labor es informaros sobre los RESTOS ORGANICOS.</speak-char>
       <condition />
-      <speak-char idTarget="ProfPapel">Hasta el próximo día.</speak-char>
+      <speak-char idTarget="ProfOrganico">“Los restos orgánicos van en los contenedores marrones, y son la categoría más común a la hora de reciclar.</speak-char>
+      <condition />
+      <speak-char idTarget="ProfOrganico">De hecho, muchas personas tienden a introducir por error todo tipo de residuos no orgánicos en esta categoría.</speak-char>
+      <condition />
+      <speak-player>¿Como cuáles?</speak-player>
+      <condition />
+      <speak-char idTarget="ProfOrganico">Como polvo, pelo, colillas, restos de cerámica, pañales y mucho más.</speak-char>
+      <condition />
+      <speak-char idTarget="ProfOrganico">Se considera como restos orgánicos a los alimentos en general: pescados, carnes, frutas y verduras, y similares.</speak-char>
+      <condition />
+      <speak-char idTarget="ProfOrganico">Aunque esos no son todos los residuos incluidos en esta categoría.</speak-char>
+      <condition />
+      <speak-char idTarget="ProfOrganico">¿Alguien tiene alguna duda al respecto?</speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" showUserOption="yes" preListening="yes" editor-x="400" editor-y="114" x="400" y="114">
+      <speak-player>¿Puede repetir cuáles son los restos que van en este contenedor?</speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>¿Qué pasa con las cáscaras de huevo, las pepitas de la fruta o los posos de las infusiones?</speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>¿Se puede incluir el papel en esta categoría?</speak-player>
+      <condition />
+      <child nodeindex="4" />
+      <speak-player>No tengo más preguntas.</speak-player>
+      <condition />
+      <child nodeindex="5" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="1118" editor-y="12">
+      <speak-char idTarget="ProfOrganico">Se considera como restos orgánicos a los alimentos en general: pescados, carnes, frutas y verduras, y similares.</speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="1110" editor-y="203">
+      <speak-char idTarget="ProfOrganico">Las cáscaras de huevo, las pepitas, los posos y similares van incluidos en esta categoría.</speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="1117" editor-y="393">
+      <speak-char idTarget="ProfOrganico">Si se trata de elementos como servilletas o papel higiénico o de cocina que hayan sido usados, sí se pueden, y deben, incluir en este contenedor.</speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <dialogue-node nodeindex="5" editor-x="1128" editor-y="588">
+      <speak-char idTarget="ProfOrganico">Perfecto ¡pues vamos a ello!</speak-char>
       <condition />
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="ExplicacionProfVidrio">
+  <graph-conversation id="ProfPapelDialogo1">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
-      <speak-char idTarget="ProfVidrio">Esta es la clase de los vidrios.</speak-char>
+      <speak-char idTarget="ProfPapel">Bienvenido a la clase azul. Azul por nuestro contenedor, claro.</speak-char>
       <condition />
-      <speak-char idTarget="ProfVidrio">Hasta mañana y recordad reciclar.</speak-char>
+      <speak-char idTarget="ProfPapel">Mi papel es hablarte sobre los contenedores azules y su uso, sin trampa ni cartón.</speak-char>
+      <condition />
+      <speak-player>¿Sin trampa ni cartón?</speak-player>
+      <condition />
+      <speak-char idTarget="ProfPapel">Bueno, sin cartones no, claro. Los contenedores azules son para papel y cartón principalmente, aunque también incluyen algunos otros productos.</speak-char>
+      <condition />
+      <speak-char idTarget="ProfPapel">Hablamos de folios y hojas, de cartones, de envases de alimentación, papel de regalo, calzado, papel de uso diario…</speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" showUserOption="yes" preListening="yes" editor-x="586" editor-y="50" x="586" y="50">
+      <speak-player>¿Eso incluye pañuelos, servilletas y similares?</speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>¿Puedo reciclar mis apuntes?</speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>Entiendo.</speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="1026" editor-y="50">
+      <speak-char idTarget="ProfPapel">Sí, siempre que no hayan sido usados. Si no, deben ir en el contenedor orgánico.</speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="1026" editor-y="244">
+      <speak-char idTarget="ProfPapel">Sí, si quieres reciclar la asignatura para repetir año.</speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="1026" editor-y="438">
+      <speak-char idTarget="ProfPapel">Así que ya sabes ¡A recoger papeles por ahí!</speak-char>
       <condition />
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="ExplicacionProPlastico">
-    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
-      <speak-char idTarget="ProfPlastico">Los plásticos son muy malos para los pececitos.</speak-char>
+  <graph-conversation id="ProfPapelDialogo2">
+    <option-node nodeindex="0" showUserOption="yes" preListening="yes" editor-x="50" editor-y="50" x="50" y="50">
+      <speak-player>Se me ha olvidado lo que iba en este contenedor. ¿Me lo puedes recordar?</speak-player>
       <condition />
-      <speak-char idTarget="ProfPlastico">Pasadlo bien el fin de semana!</speak-char>
+      <child nodeindex="1" />
+      <speak-player>¿Los pañuelos, las servilletas y similares van aquí?</speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>¿Puedo reciclar mis apuntes?</speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>Entiendo.</speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </option-node>
+    <dialogue-node nodeindex="1" editor-x="619" editor-y="50">
+      <speak-char idTarget="ProfPapel">Los contenedores azules son para papel y cartón. Esto es, folios y hojas, cartones, envases de alimentación, papel de regalo, calzado, papel de uso diario…</speak-char>
+      <condition />
+      <child nodeindex="0" />
+    </dialogue-node>
+    <dialogue-node nodeindex="2" editor-x="619" editor-y="244">
+      <speak-char idTarget="ProfPapel">Sí, siempre que no hayan sido usados. Si no, deben ir en el contenedor orgánico.</speak-char>
+      <condition />
+      <child nodeindex="0" />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="619" editor-y="438">
+      <speak-char idTarget="ProfPapel">Sí, si quieres reciclar la asignatura para repetir año.</speak-char>
+      <condition />
+      <child nodeindex="0" />
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="619" editor-y="632">
+      <speak-char idTarget="ProfPapel">Así que ya sabes ¡A recoger papeles por ahí!</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="ProfVidrioDialogo1">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="ProfVidrio">¿Vienes a informarte sobre los contenedores verdes?</speak-char>
+      <condition />
+      <speak-player>Así es.</speak-player>
+      <condition />
+      <speak-char idTarget="ProfVidrio">¡Genial! Pues mira, los contenedores verdes son los apropiados para reciclar los ENVASES DE VIDRIO</speak-char>
+      <condition />
+      <speak-char idTarget="ProfVidrio">Esto es, las botellas de vidrio, los frascos como los de perfume y los tarros para alimentos.</speak-char>
+      <condition />
+      <speak-char idTarget="ProfVidrio">Pero OJO. Aquí solo valen los restos de vidrio, que no son los mismos que los de cristal.</speak-char>
+      <condition />
+      <speak-char idTarget="ProfVidrio">¿Tienes alguna duda?</speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" showUserOption="yes" preListening="yes" editor-x="662" editor-y="50" x="662" y="50">
+      <speak-player>¿Eso significa que no puedo tirar cosas de cristal a este contenedor?</speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>El otro día se me ropieron las gafas y no sabía dónde tirarlas. ¿Van aquí?</speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>Nada más. Todo claro, clarinete.</speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="882" editor-y="50">
+      <speak-char idTarget="ProfVidrio">Exacto. Los productos de cristal más típicos, como bombillas, espejos, vasos o ceniceros deben ser entregados a un punto limpio.</speak-char>
+      <condition />
+      <child nodeindex="0" />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="882" editor-y="244">
+      <speak-char idTarget="ProfVidrio">Las gafas son un caso especial, por la montura y porque las lentes no siempre son de vidrio. Lo apropiado es llevarlas a una óptica para que las aprovechen.</speak-char>
+      <condition />
+      <child nodeindex="0" />
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="882" editor-y="438">
+      <speak-char idTarget="ProfVidrio">Pues ale, a recoger y reciclar.</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="ProfVidrioDialogo2">
+    <option-node nodeindex="0" showUserOption="yes" preListening="yes" editor-x="50" editor-y="50" x="50" y="50">
+      <speak-player>¿Puedes repetirme qué cosas van en los contenedores verdes?</speak-player>
+      <condition />
+      <child nodeindex="1" />
+      <speak-player>¿Las cosas de cristal también van aquí?</speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>El otro día se me ropieron las gafas y no sabía dónde tirarlas ¿Van aquí?</speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>Nada más. Todo claro, clarinete.</speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </option-node>
+    <dialogue-node nodeindex="1" editor-x="542" editor-y="50">
+      <speak-char idTarget="ProfVidrio">Las botellas de vidrio, los frascos como los de perfume y los tarros para alimentos.</speak-char>
+      <condition />
+      <child nodeindex="0" />
+    </dialogue-node>
+    <dialogue-node nodeindex="2" editor-x="542" editor-y="244">
+      <speak-char idTarget="ProfVidrio">No, ni mucho menos. Los productos de cristal más típicos, como bombillas, espejos, vasos o ceniceros deben ser entregados a un punto limpio</speak-char>
+      <condition />
+      <child nodeindex="0" />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="542" editor-y="438">
+      <speak-char idTarget="ProfVidrio">Las gafas son un caso especial, por la montura y porque las lentes no siempre son de vidrio. Lo apropiado es llevarlas a una óptica para que las aprovechen.</speak-char>
+      <condition />
+      <child nodeindex="0" />
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="542" editor-y="632">
+      <speak-char idTarget="ProfVidrio">Pues ale, a recoger y reciclar.</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="ProfPlasticoDialogo1">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="ProfPlastico">En esta clase nos encargamos del contenedor amarillo, uno de los contenedores más comunes pero que más problemas dan a la gente.</speak-char>
+      <condition />
+      <speak-char idTarget="ProfPlastico">Lo usas todos los días, pero… ¿De verdad sabes todo lo que va dentro del contenedor amarillo?</speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" showUserOption="yes" preListening="yes" editor-x="73" editor-y="355" x="73" y="355">
+      <speak-player>Pff… Por supuesto.</speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>Pues claro que sí.</speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>Eso creo…</speak-player>
+      <condition />
+      <child nodeindex="2" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="656" editor-y="372">
+      <speak-char idTarget="ProfPlastico">Pues probablemente no sea así. El contenedor amarillo está destinado para plásticos y envases, aunque no siempre es sencillo clasificar correctamente sus residuos.</speak-char>
+      <condition />
+      <speak-char idTarget="ProfPlastico">Los más típicos son las botellas de plástico o las latas, aunque también se incluyen los envases de plástico como los de yogurt, el papel de aluminio…</speak-char>
+      <condition />
+      <speak-char idTarget="ProfPlastico">…las bandejas de corcho de los alimentos, las chapas metálicas de las botellas, tubos de pasta de dientes, botes de desodorante, aerosoles vacíos, y un largo etcétera.</speak-char>
+      <condition />
+      <child nodeindex="3" />
+    </dialogue-node>
+    <option-node nodeindex="3" showUserOption="yes" preListening="yes" editor-x="74" editor-y="792" x="74" y="792">
+      <speak-player>¿Esto incluye los briks o esos van con el cartón?</speak-player>
+      <condition />
+      <child nodeindex="4" />
+      <speak-player>Entonces… ¿Todo lo que sea de plástico va aquí?</speak-player>
+      <condition />
+      <child nodeindex="5" />
+      <speak-player>¿Alguna excepción notable?</speak-player>
+      <condition />
+      <child nodeindex="6" />
+      <speak-player>Entendido.</speak-player>
+      <condition />
+      <child nodeindex="7" />
+    </option-node>
+    <dialogue-node nodeindex="4" editor-x="588" editor-y="669">
+      <speak-char idTarget="ProfPlastico">Por supuesto. Los briks van todos en este contenedor, y es de gran utilidad el doblarlos antes de introducirlos para ahorrar espacio.</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+    <dialogue-node nodeindex="5" editor-x="597" editor-y="903">
+      <speak-char idTarget="ProfPlastico">No, no. Ni mucho menos. Productos como juguetes de plástico, biberones y chupetes, utensilios de cocina o cubos de plástico deben ir al contenedor gris de restos.</speak-char>
+      <condition />
+      <child nodeindex="3" />
+    </dialogue-node>
+    <dialogue-node nodeindex="6" editor-x="596" editor-y="1164">
+      <speak-char idTarget="ProfPlastico">¿Alguna? ¡Muchísimas! El papel plastificado, los ‘tuppers’, las cápsulas de café, los termos, bolígrafos y sacapuntas, los mecheros…</speak-char>
+      <condition />
+      <speak-char idTarget="ProfPlastico">…las macetas de plástico, los envases de medicamentos, neceseres, fotografías, moldes de silicona para cocinar, y muchos, muchos productos más que no deben ir aquí.</speak-char>
+      <condition />
+      <child nodeindex="3" />
+    </dialogue-node>
+    <dialogue-node nodeindex="7" editor-x="294" editor-y="1379">
+      <speak-char idTarget="ProfPlastico">¿Seguro? Estoy aquí para cualquier duda que tengas.</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="ProfPlasticoDialogo2">
+    <option-node nodeindex="0" showUserOption="yes" preListening="yes" editor-x="50" editor-y="50" x="50" y="50">
+      <speak-player>Este contenedor era chunguillo ¿Me puedes recordar lo que iba en él?</speak-player>
+      <condition />
+      <child nodeindex="1" />
+      <speak-player>¿Los briks van aquí o en el de cartón?</speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>¿Todo lo que sea de plástico va aquí?</speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>¿Alguna excepción notable?</speak-player>
+      <condition />
+      <child nodeindex="4" />
+      <speak-player>Entendido.</speak-player>
+      <condition />
+      <child nodeindex="5" />
+    </option-node>
+    <dialogue-node nodeindex="1" editor-x="756" editor-y="50">
+      <speak-char idTarget="ProfPlastico">El contenedor amarillo es para plásticos y envases. Cosas como las botellas de plástico, las latas, botes de plástico, papel de aluminio, tubos de pasta de dientes, aerosoles vacíos...</speak-char>
+      <condition />
+      <child nodeindex="0" />
+    </dialogue-node>
+    <dialogue-node nodeindex="2" editor-x="756" editor-y="244">
+      <speak-char idTarget="ProfPlastico">Los briks van todos en este contenedor, y es de gran utilidad el doblarlos antes de introducirlos para ahorrar espacio.</speak-char>
+      <condition />
+      <child nodeindex="0" />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="756" editor-y="438">
+      <speak-char idTarget="ProfPlastico">No, no. Ni mucho menos. Productos como juguetes de plástico, biberones y chupetes, utensilios de cocina o cubos de plástico deben ir al contenedor gris de restos.</speak-char>
+      <condition />
+      <child nodeindex="0" />
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="756" editor-y="632">
+      <speak-char idTarget="ProfPlastico">¿Alguna? ¡Muchísimas! El papel plastificado, los ‘tuppers’, las cápsulas de café, los termos, bolígrafos y sacapuntas, los mecheros…</speak-char>
+      <condition />
+      <speak-char idTarget="ProfPlastico">…las macetas de plástico, los envases de medicamentos, neceseres, fotografías, moldes de silicona para cocinar, y muchos, muchos productos más que no deben ir aquí.</speak-char>
+      <condition />
+      <child nodeindex="0" />
+    </dialogue-node>
+    <dialogue-node nodeindex="5" editor-x="756" editor-y="826">
+      <speak-char idTarget="ProfPlastico">¿Seguro? Estoy aquí para cualquier duda que tengas.</speak-char>
       <condition />
       <end-conversation />
     </dialogue-node>
@@ -725,7 +1109,22 @@
     <name>
     </name>
   </slidescene>
-  <timer time="10" usesEndCondition="yes" multipleStarts="yes" runsInLoop="no" showTime="yes" displayName="Tiempo" countDown="yes" showWhenStopped="no">
+  <slidescene id="FinTutorial" start="no" next="go-back" class="accesible" type="cutscene">
+    <documentation>
+    </documentation>
+    <effect>
+      <activate flag="finTutorial" />
+      <condition />
+      <activate flag="conversacionInactiva" />
+      <condition />
+    </effect>
+    <resources name="No name">
+      <asset type="slides" uri="assets/animation/finTutorial.eaa.xml" />
+    </resources>
+    <name>
+    </name>
+  </slidescene>
+  <timer time="600" usesEndCondition="yes" multipleStarts="yes" runsInLoop="no" showTime="yes" displayName="Tiempo" countDown="yes" showWhenStopped="no">
     <init-condition>
       <active flag="conversacionInactiva" />
     </init-condition>

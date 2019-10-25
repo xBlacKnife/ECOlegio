@@ -49,7 +49,7 @@ namespace uAdventure.Runner
 
         private void UpdateView()
         {
-            string sign = Timer.isCountDown() ? "-" : "";
+            string sign = Timer.isCountDown() ? "" : "-";
             timerText.text = Timer.getDisplayName() + ": " + sign + timeFormatter.ToString("HH:mm:ss");
         }
     }

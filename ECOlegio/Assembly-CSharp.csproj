@@ -547,6 +547,7 @@
      <None Include="Assets\uAdventure\Shaders\ShinyDefault.shader" />
      <None Include="Assets\uAdventure\Resources\config_editor.xml" />
      <None Include="Assets\uAdventure\Resources\Upgrader\chapter-v0-to-v1.xml" />
+     <None Include="Assets\uAdventure\Resources\CurrentGame\assets\animation\finTutorial.eaa.xml" />
      <None Include="Assets\uAdventure\Resources\config_engine.xml" />
      <None Include="Assets\uAdventure\Plugins\unity-tracker\csharp-tracker\AssetManager\RageAssetManager\Resources\BaseAsset.VersionAndDependencies.xml" />
  <Reference Include="UnityEngine.CoreModule">
