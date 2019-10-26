@@ -32,37 +32,6 @@
     </description>
     <voice name="" synthesizeAlways="no" />
   </player>
-  <character id="ContenedorNPC">
-    <resources name="No name">
-      <asset type="standup" uri="assets/special/EmptyAnimation" />
-      <asset type="standdown" uri="assets/animation/contenedorOrganico.eaa.xml" />
-      <asset type="standright" uri="assets/special/EmptyAnimation" />
-      <asset type="standleft" uri="assets/special/EmptyAnimation" />
-      <asset type="speakup" uri="assets/special/EmptyAnimation" />
-      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
-      <asset type="speakright" uri="assets/special/EmptyAnimation" />
-      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
-      <asset type="useright" uri="assets/special/EmptyAnimation" />
-      <asset type="useleft" uri="assets/special/EmptyAnimation" />
-      <asset type="walkup" uri="assets/special/EmptyAnimation" />
-      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
-      <asset type="walkright" uri="assets/special/EmptyAnimation" />
-      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
-    </resources>
-    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
-      <frontcolor color="#FFFFFF" />
-      <bordercolor color="#000000" />
-    </textcolor>
-    <description>
-      <name>
-      </name>
-      <brief>
-      </brief>
-      <detailed>
-      </detailed>
-    </description>
-    <voice name="" synthesizeAlways="no" />
-  </character>
   <character id="ProfVidrio">
     <resources name="No name">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
@@ -553,6 +522,15 @@
         </post-effect>
       </exit>
     </exits>
+    <objects>
+      <object-ref idTarget="PapelHigienico" x="292" y="755" scale="1" layer="10" hasInfluenceArea="no" />
+      <object-ref idTarget="LataRefresco" x="368" y="551" scale="1" layer="9" hasInfluenceArea="no" />
+      <object-ref idTarget="AvionPapel" x="1678" y="871" scale="1" layer="8" hasInfluenceArea="no" />
+      <object-ref idTarget="Revista" x="768" y="899" scale="1" layer="7" hasInfluenceArea="no" />
+      <object-ref idTarget="Platano" x="1172" y="843" scale="1" layer="6" hasInfluenceArea="no" />
+      <object-ref idTarget="EspinaPescado" x="1623" y="739" scale="1" layer="5" hasInfluenceArea="no" />
+      <object-ref idTarget="BolsaPatatas" x="1918" y="891" scale="1" layer="4" hasInfluenceArea="no" />
+    </objects>
     <characters>
       <character-ref idTarget="ContenedorMarron" x="631" y="570" scale="0.8" orientation="2" layer="3" hasInfluenceArea="no" />
       <character-ref idTarget="ContenedorAzul" x="1789" y="570" scale="0.8" orientation="2" layer="2" hasInfluenceArea="no" />
@@ -585,6 +563,13 @@
         </post-effect>
       </exit>
     </exits>
+    <objects>
+      <object-ref idTarget="BrickZumo" x="1316" y="586" scale="0.1157431" layer="3" hasInfluenceArea="no" />
+      <object-ref idTarget="BotellaAlcohol" x="208" y="1004" scale="0.09878409" layer="2" hasInfluenceArea="no" />
+      <object-ref idTarget="Probeta" x="1582" y="1006" scale="0.1086961" layer="1" hasInfluenceArea="no" />
+      <object-ref idTarget="CartelSueloMojado" x="635" y="490" scale="0.158211" layer="4" hasInfluenceArea="no" />
+      <object-ref idTarget="CartelSueloMojado" x="1414" y="490" scale="0.158211" layer="0" hasInfluenceArea="no" />
+    </objects>
   </scene>
   <scene id="PasilloPlanta1" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
@@ -651,6 +636,11 @@
         </post-effect>
       </exit>
     </exits>
+    <objects>
+      <object-ref idTarget="Potito" x="606" y="1014" scale="0.153276" layer="2" hasInfluenceArea="no" />
+      <object-ref idTarget="BolaPapel" x="1728" y="941" scale="0.2184981" layer="1" hasInfluenceArea="no" />
+      <object-ref idTarget="Periodico" x="841" y="594" scale="0.1698908" layer="0" hasInfluenceArea="no" />
+    </objects>
   </scene>
   <scene id="PasilloPlanta2" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
@@ -710,6 +700,9 @@
         </post-effect>
       </exit>
     </exits>
+    <objects>
+      <object-ref idTarget="CartelSueloMojado" x="1000" y="156" scale="0.1525435" layer="0" hasInfluenceArea="no" />
+    </objects>
   </scene>
   <scene id="Cafetería" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
@@ -730,6 +723,15 @@
         </post-effect>
       </exit>
     </exits>
+    <objects>
+      <object-ref idTarget="BotellaCola" x="244" y="361" scale="1" layer="6" hasInfluenceArea="no" />
+      <object-ref idTarget="CajaGalletas" x="1760" y="417" scale="1" layer="5" hasInfluenceArea="no" />
+      <object-ref idTarget="Galletas" x="1608" y="641" scale="1" layer="4" hasInfluenceArea="no" />
+      <object-ref idTarget="Tarro" x="1176" y="693" scale="1" layer="3" hasInfluenceArea="no" />
+      <object-ref idTarget="BrickLeche" x="952" y="705" scale="1" layer="2" hasInfluenceArea="no" />
+      <object-ref idTarget="Bocadillo" x="246" y="889" scale="1" layer="1" hasInfluenceArea="no" />
+      <object-ref idTarget="BotellaAgua" x="756" y="417" scale="1" layer="0" hasInfluenceArea="no" />
+    </objects>
   </scene>
   <scene id="Menu" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
@@ -767,9 +769,9 @@
     </name>
     <default-initial-position x="400" y="450" />
   </scene>
-  <object id="PlatanoItem" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+  <object id="Bocadillo" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
-      <asset type="image" uri="assets/image/banana.png" />
+      <asset type="image" uri="assets/image/bocadillo.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
@@ -780,24 +782,286 @@
       <detailed>
       </detailed>
     </description>
-    <actions>
-      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
-        <effect>
-          <remove-element idTarget="PlatanoItem" />
-          <condition />
-          <generate-object idTarget="PlatanoItem" />
-          <condition />
-        </effect>
-      </grab>
-      <give-to idTarget="ContenedorNPC" needsGoTo="yes" keepDistance="35" not-effects="no">
-        <effect>
-          <consume-object idTarget="PlatanoItem" />
-          <condition />
-          <increment var="score" value="5" />
-          <condition />
-        </effect>
-      </give-to>
-    </actions>
+  </object>
+  <object id="EspinaPescado" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/espina-pescado.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <object id="Galletas" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/galletas.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <object id="PapelHigienico" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/papel-higienico.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <object id="Platano" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/platano.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <object id="AvionPapel" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/avion-papel.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <object id="BolaPapel" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/bola-papel.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <object id="CajaGalletas" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/caja-galletas.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <object id="Periodico" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/periodico.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <object id="Revista" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/revista.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <object id="BolsaPatatas" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/bolsa-patatas.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <object id="BotellaAgua" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/botella-agua.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <object id="BrickLeche" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/brick-leche.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <object id="BrickZumo" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/brick-zumo.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <object id="LataRefresco" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/lata-refresco.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <object id="BotellaAlcohol" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/botella-alcohol.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <object id="BotellaCola" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/botella-cola.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <object id="Potito" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/potito.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <object id="Probeta" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/probeta.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <object id="Tarro" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/tarro.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <object id="CartelSueloMojado" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/suelo-mojado.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
   </object>
   <atrezzoobject id="FondoOrganico">
     <resources name="No name">
