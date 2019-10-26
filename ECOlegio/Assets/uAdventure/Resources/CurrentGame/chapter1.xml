@@ -165,7 +165,9 @@
           <trigger-conversation idTarget="ProfOrganicoDialogo2" />
           <condition />
           <activate flag="conversacionInactiva" />
-          <condition />
+          <condition>
+            <active flag="finTutorial" />
+          </condition>
           <activate flag="profOrganicoDialogo2Fin" />
           <condition />
         </effect>
@@ -282,7 +284,7 @@
       <exit rectangular="yes" x="1798" y="157" width="136" height="527" hasInfluenceArea="no" idTarget="PasilloPlanta2" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="3" transitionTime="750" not-effects="yes">
         <exit-look text="" cursor-path="" sound-path="" />
         <condition>
-          <active flag="profPapelDialogo2Fin" />
+          <active flag="profOrganicoDialogo2Fin" />
         </condition>
         <effect>
           <deactivate flag="conversacionInactiva" />
