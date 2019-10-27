@@ -704,7 +704,7 @@
       <object-ref idTarget="CartelSueloMojado" x="1000" y="156" scale="0.1525435" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
-  <scene id="Cafetería" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Cafetería" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -759,7 +759,7 @@
       <atrezzo-ref idTarget="BotonPlay" x="960" y="1080" scale="1" layer="0" />
     </atrezzo>
   </scene>
-  <scene id="NotasFinales" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="NotasFinales" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -840,8 +840,7 @@
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
-      <name>
-      </name>
+      <name>Bocadillo</name>
       <brief>Es un bocadillo en mal estado...</brief>
       <detailed>Es un bocadillo en mal estado...</detailed>
     </description>
@@ -875,12 +874,9 @@
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
-      <name>
-      </name>
-      <brief>
-      </brief>
-      <detailed>
-      </detailed>
+      <name>Espina de pescado</name>
+      <brief>Una espina de pescado!</brief>
+      <detailed>Una espina de pescado!</detailed>
     </description>
     <actions>
       <examine needsGoTo="no" keepDistance="0" not-effects="no" />
@@ -912,12 +908,9 @@
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
-      <name>
-      </name>
-      <brief>
-      </brief>
-      <detailed>
-      </detailed>
+      <name>Galletas</name>
+      <brief>Galletas del suelo... no se pueden comer ya</brief>
+      <detailed>Galletas del suelo... no se pueden comer ya</detailed>
     </description>
     <actions>
       <examine needsGoTo="no" keepDistance="0" not-effects="no" />
@@ -949,12 +942,9 @@
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
-      <name>
-      </name>
-      <brief>
-      </brief>
-      <detailed>
-      </detailed>
+      <name>Papel higiénico</name>
+      <brief>Papel higiénico sucio... </brief>
+      <detailed>Papel higiénico sucio...</detailed>
     </description>
     <actions>
       <examine needsGoTo="no" keepDistance="0" not-effects="no" />
@@ -986,12 +976,9 @@
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
-      <name>
-      </name>
-      <brief>
-      </brief>
-      <detailed>
-      </detailed>
+      <name>Cascara de plátano</name>
+      <brief>Es solo la cáscara de un plátano</brief>
+      <detailed>Es solo la cáscara de un plátano</detailed>
     </description>
     <actions>
       <examine needsGoTo="no" keepDistance="0" not-effects="no" />
@@ -1023,12 +1010,9 @@
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
-      <name>
-      </name>
-      <brief>
-      </brief>
-      <detailed>
-      </detailed>
+      <name>Avión de papel</name>
+      <brief>Un avión de papel</brief>
+      <detailed>Un avión de papel</detailed>
     </description>
     <actions>
       <examine needsGoTo="no" keepDistance="0" not-effects="no" />
@@ -1060,12 +1044,9 @@
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
-      <name>
-      </name>
-      <brief>
-      </brief>
-      <detailed>
-      </detailed>
+      <name>Bola de papel</name>
+      <brief>Una hoja de apuntes hecha bola</brief>
+      <detailed>Una hoja de apuntes hecha bola</detailed>
     </description>
     <actions>
       <examine needsGoTo="no" keepDistance="0" not-effects="no" />
@@ -1097,12 +1078,9 @@
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
-      <name>
-      </name>
-      <brief>
-      </brief>
-      <detailed>
-      </detailed>
+      <name>Caja de galletas</name>
+      <brief>Una caja de galletas vacía</brief>
+      <detailed>Una caja de galletas vacía</detailed>
     </description>
     <actions>
       <examine needsGoTo="no" keepDistance="0" not-effects="no" />
@@ -1134,12 +1112,9 @@
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
-      <name>
-      </name>
-      <brief>
-      </brief>
-      <detailed>
-      </detailed>
+      <name>Periódico</name>
+      <brief>Parece que no es de nadie este periódico</brief>
+      <detailed>Parece que no es de nadie este periódico</detailed>
     </description>
     <actions>
       <examine needsGoTo="no" keepDistance="0" not-effects="no" />
@@ -1171,12 +1146,9 @@
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
-      <name>
-      </name>
-      <brief>
-      </brief>
-      <detailed>
-      </detailed>
+      <name>Revista</name>
+      <brief>Han tirado una revista al suelo...</brief>
+      <detailed>Han tirado una revista al suelo...</detailed>
     </description>
     <actions>
       <examine needsGoTo="no" keepDistance="0" not-effects="no" />
@@ -1208,12 +1180,9 @@
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
-      <name>
-      </name>
-      <brief>
-      </brief>
-      <detailed>
-      </detailed>
+      <name>Bolsa de patatas</name>
+      <brief>Que pena... no quedan patatas</brief>
+      <detailed>Que pena... no quedan patatas</detailed>
     </description>
     <actions>
       <examine needsGoTo="no" keepDistance="0" not-effects="no" />
@@ -1245,12 +1214,9 @@
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
-      <name>
-      </name>
-      <brief>
-      </brief>
-      <detailed>
-      </detailed>
+      <name>Botella de agua</name>
+      <brief>Está vacía...</brief>
+      <detailed>Está vacía...</detailed>
     </description>
     <actions>
       <examine needsGoTo="no" keepDistance="0" not-effects="no" />
@@ -1282,12 +1248,9 @@
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
-      <name>
-      </name>
-      <brief>
-      </brief>
-      <detailed>
-      </detailed>
+      <name>Brick de leche</name>
+      <brief>Es un brick de leche... sin leche</brief>
+      <detailed>Es un brick de leche... sin leche</detailed>
     </description>
     <actions>
       <examine needsGoTo="no" keepDistance="0" not-effects="no" />
@@ -1319,12 +1282,9 @@
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
-      <name>
-      </name>
-      <brief>
-      </brief>
-      <detailed>
-      </detailed>
+      <name>Brick de zumo</name>
+      <brief>No han dejado ni una gota de zumo</brief>
+      <detailed>No han dejado ni una gota de zumo</detailed>
     </description>
     <actions>
       <examine needsGoTo="no" keepDistance="0" not-effects="no" />
@@ -1356,12 +1316,9 @@
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
-      <name>
-      </name>
-      <brief>
-      </brief>
-      <detailed>
-      </detailed>
+      <name>Lata de refresco</name>
+      <brief>Esta lata está vacía</brief>
+      <detailed>Esta lata está vacía</detailed>
     </description>
     <actions>
       <examine needsGoTo="no" keepDistance="0" not-effects="no" />
@@ -1393,12 +1350,9 @@
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
-      <name>
-      </name>
-      <brief>
-      </brief>
-      <detailed>
-      </detailed>
+      <name>Botella de alcohol</name>
+      <brief>No creo que esta botella sea de un niño</brief>
+      <detailed>No creo que esta botella sea de un niño</detailed>
     </description>
     <actions>
       <examine needsGoTo="no" keepDistance="0" not-effects="no" />
@@ -1430,12 +1384,9 @@
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
-      <name>
-      </name>
-      <brief>
-      </brief>
-      <detailed>
-      </detailed>
+      <name>Botella Cola</name>
+      <brief>No queda ni un poco de Cola</brief>
+      <detailed>No queda ni un poco de Cola</detailed>
     </description>
     <actions>
       <examine needsGoTo="no" keepDistance="0" not-effects="no" />
@@ -1467,12 +1418,9 @@
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
-      <name>
-      </name>
-      <brief>
-      </brief>
-      <detailed>
-      </detailed>
+      <name>Potito</name>
+      <brief>Parece de un potito de frutas</brief>
+      <detailed>Parece de un potito de frutas</detailed>
     </description>
     <actions>
       <examine needsGoTo="no" keepDistance="0" not-effects="no" />
@@ -1504,12 +1452,9 @@
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
-      <name>
-      </name>
-      <brief>
-      </brief>
-      <detailed>
-      </detailed>
+      <name>Probeta</name>
+      <brief>Será que ya no se necesita en clase...</brief>
+      <detailed>Será que ya no se necesita en clase...</detailed>
     </description>
     <actions>
       <examine needsGoTo="no" keepDistance="0" not-effects="no" />
@@ -1541,12 +1486,9 @@
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
-      <name>
-      </name>
-      <brief>
-      </brief>
-      <detailed>
-      </detailed>
+      <name>Tarro</name>
+      <brief>Qué habría antes en este tarro?</brief>
+      <detailed>Qué habría antes en este tarro?</detailed>
     </description>
     <actions>
       <examine needsGoTo="no" keepDistance="0" not-effects="no" />
@@ -1578,35 +1520,12 @@
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
-      <name>
-      </name>
-      <brief>
-      </brief>
-      <detailed>
-      </detailed>
+      <name>Cartel suelo mojado</name>
+      <brief>Parece que no se puede pasar</brief>
+      <detailed>Parece que no se puede pasar</detailed>
     </description>
     <actions>
       <examine needsGoTo="no" keepDistance="0" not-effects="no" />
-      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
-        <condition>
-          <active flag="profVidrioDialogo2Fin" />
-        </condition>
-        <effect>
-          <remove-element idTarget="CartelSueloMojado" />
-          <condition />
-          <generate-object idTarget="CartelSueloMojado" />
-          <condition />
-        </effect>
-      </grab>
-      <give-to idTarget="ContenedorVerde" needsGoTo="yes" keepDistance="35" not-effects="no">
-        <condition>
-          <active flag="profVidrioDialogo2Fin" />
-        </condition>
-        <effect>
-          <consume-object idTarget="CartelSueloMojado" />
-          <condition />
-        </effect>
-      </give-to>
     </actions>
   </object>
   <atrezzoobject id="FondoOrganico">
