@@ -724,28 +724,28 @@
  <HintPath>C:/Program Files/Unity/Hub/Editor/2017.4.33f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
  </Reference>
  <Reference Include="LibTess">
- <HintPath>D:/Nu/Documents/UCM/2019-2020/Juegos Serios/Proyectos Unity/ECOlegio/ECOlegio/Assets/uAdventure/Plugins/LibTess.dll</HintPath>
+ <HintPath>C:/Users/avr-9/Desktop/Desarrollo de Videojuegos/Juegos Serios/Prácticas/ECOlegio/ECOlegio/Assets/uAdventure/Plugins/LibTess.dll</HintPath>
  </Reference>
  <Reference Include="UniRxUniversal">
- <HintPath>D:/Nu/Documents/UCM/2019-2020/Juegos Serios/Proyectos Unity/ECOlegio/ECOlegio/Assets/uAdventure/Plugins/UniRxUniversal.dll</HintPath>
+ <HintPath>C:/Users/avr-9/Desktop/Desarrollo de Videojuegos/Juegos Serios/Prácticas/ECOlegio/ECOlegio/Assets/uAdventure/Plugins/UniRxUniversal.dll</HintPath>
  </Reference>
  <Reference Include="Ionic.Zip">
- <HintPath>D:/Nu/Documents/UCM/2019-2020/Juegos Serios/Proyectos Unity/ECOlegio/ECOlegio/Assets/uAdventure/Plugins/Zip/Ionic.Zip.dll</HintPath>
+ <HintPath>C:/Users/avr-9/Desktop/Desarrollo de Videojuegos/Juegos Serios/Prácticas/ECOlegio/ECOlegio/Assets/uAdventure/Plugins/Zip/Ionic.Zip.dll</HintPath>
  </Reference>
  <Reference Include="Triangulation">
- <HintPath>D:/Nu/Documents/UCM/2019-2020/Juegos Serios/Proyectos Unity/ECOlegio/ECOlegio/Assets/uAdventureGeo/Plugins/Triangulation.dll</HintPath>
+ <HintPath>C:/Users/avr-9/Desktop/Desarrollo de Videojuegos/Juegos Serios/Prácticas/ECOlegio/ECOlegio/Assets/uAdventureGeo/Plugins/Triangulation.dll</HintPath>
  </Reference>
  <Reference Include="zxing.unity">
- <HintPath>D:/Nu/Documents/UCM/2019-2020/Juegos Serios/Proyectos Unity/ECOlegio/ECOlegio/Assets/uAdventureQR/Plugins/zxing.unity.dll</HintPath>
+ <HintPath>C:/Users/avr-9/Desktop/Desarrollo de Videojuegos/Juegos Serios/Prácticas/ECOlegio/ECOlegio/Assets/uAdventureQR/Plugins/zxing.unity.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Analytics">
- <HintPath>C:/Users/nuria/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.13/UnityEngine.Analytics.dll</HintPath>
+ <HintPath>C:/Users/avr-9/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.13/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Purchasing">
- <HintPath>C:/Users/nuria/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.purchasing@0.0.19/UnityEngine.Purchasing.dll</HintPath>
+ <HintPath>C:/Users/avr-9/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.purchasing@0.0.19/UnityEngine.Purchasing.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.StandardEvents">
- <HintPath>C:/Users/nuria/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
+ <HintPath>C:/Users/avr-9/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

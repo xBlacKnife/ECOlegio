@@ -380,7 +380,7 @@
       <asset type="walkright" uri="assets/special/EmptyAnimation" />
       <asset type="walkleft" uri="assets/special/EmptyAnimation" />
     </resources>
-    <textcolor showsSpeechBubble="no" bubbleBkgColor="#DC8997" bubbleBorderColor="#000000">
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#547B76" bubbleBorderColor="#2E5049">
       <frontcolor color="#FFFFFF" />
       <bordercolor color="#000000" />
     </textcolor>
@@ -393,6 +393,23 @@
       </detailed>
     </description>
     <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <inactive flag="eventoPatioFin" />
+        </condition>
+        <effect>
+          <deactivate flag="conversacionInactiva" />
+          <condition />
+          <trigger-conversation idTarget="PatioDialogo" />
+          <condition />
+          <activate flag="eventoPatioFin" />
+          <condition />
+          <activate flag="conversacionInactiva" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
   </character>
   <character id="ChicoCafeteria">
     <resources name="No name">
@@ -411,7 +428,7 @@
       <asset type="walkright" uri="assets/special/EmptyAnimation" />
       <asset type="walkleft" uri="assets/special/EmptyAnimation" />
     </resources>
-    <textcolor showsSpeechBubble="yes" bubbleBkgColor="#191912" bubbleBorderColor="#000000">
+    <textcolor showsSpeechBubble="yes" bubbleBkgColor="#547B76" bubbleBorderColor="#2E5049">
       <frontcolor color="#FFFFFF" />
       <bordercolor color="#000000" />
     </textcolor>
@@ -424,6 +441,23 @@
       </detailed>
     </description>
     <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <inactive flag="eventoCafeteriaFin" />
+        </condition>
+        <effect>
+          <deactivate flag="conversacionInactiva" />
+          <condition />
+          <trigger-conversation idTarget="ChicoCafeteriaDialogo" />
+          <condition />
+          <activate flag="eventoCafeteriaFin" />
+          <condition />
+          <activate flag="conversacionInactiva" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
   </character>
   <character id="ChicoPasillo">
     <resources name="No name">
@@ -442,8 +476,8 @@
       <asset type="walkright" uri="assets/special/EmptyAnimation" />
       <asset type="walkleft" uri="assets/special/EmptyAnimation" />
     </resources>
-    <textcolor showsSpeechBubble="no" bubbleBkgColor="#91261F" bubbleBorderColor="#000000">
-      <frontcolor color="#FFFFFF" />
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#547B76" bubbleBorderColor="#2E5049">
+      <frontcolor color="#FFA116" />
       <bordercolor color="#000000" />
     </textcolor>
     <description>
@@ -455,6 +489,23 @@
       </detailed>
     </description>
     <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <inactive flag="eventoPasilloFin" />
+        </condition>
+        <effect>
+          <deactivate flag="conversacionInactiva" />
+          <condition />
+          <trigger-conversation idTarget="PasilloDialogo" />
+          <condition />
+          <activate flag="eventoPasilloFin" />
+          <condition />
+          <activate flag="conversacionInactiva" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
   </character>
   <character id="ChicaPasillo">
     <resources name="No name">
@@ -473,8 +524,8 @@
       <asset type="walkright" uri="assets/special/EmptyAnimation" />
       <asset type="walkleft" uri="assets/special/EmptyAnimation" />
     </resources>
-    <textcolor showsSpeechBubble="no" bubbleBkgColor="#F2F2F2" bubbleBorderColor="#000000">
-      <frontcolor color="#FFFFFF" />
+    <textcolor showsSpeechBubble="yes" bubbleBkgColor="#547B76" bubbleBorderColor="#2E5049">
+      <frontcolor color="#B100FF" />
       <bordercolor color="#000000" />
     </textcolor>
     <description>
@@ -486,6 +537,23 @@
       </detailed>
     </description>
     <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <inactive flag="eventoPasilloFin" />
+        </condition>
+        <effect>
+          <deactivate flag="conversacionInactiva" />
+          <condition />
+          <trigger-conversation idTarget="PasilloDialogo" />
+          <condition />
+          <activate flag="eventoPasilloFin" />
+          <condition />
+          <activate flag="conversacionInactiva" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
   </character>
   <scene id="ClaseOrgánico" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
@@ -556,6 +624,14 @@
         <post-effect>
           <show-text x="585" y="800" frontColor="#000000FF" borderColor="#FFFFFFFF" uri="">Planta 2</show-text>
           <condition />
+          <trigger-conversation idTarget="Pasillo2Dialogo" />
+          <condition>
+            <inactive flag="eventoPasillo2Fin" />
+          </condition>
+          <activate flag="eventoPasillo2Fin" />
+          <condition>
+            <inactive flag="eventoPasillo2Fin" />
+          </condition>
         </post-effect>
       </exit>
     </exits>
@@ -833,7 +909,7 @@
       <object-ref idTarget="CartelSueloMojado" x="1000" y="156" scale="0.1525435" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
-  <scene id="Cafetería" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Cafetería" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -866,7 +942,7 @@
       <character-ref idTarget="ChicoCafeteria" x="529" y="651" scale="0.607201" orientation="2" layer="1" hasInfluenceArea="no" />
     </characters>
   </scene>
-  <scene id="Menu" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Menu" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -2226,6 +2302,247 @@
       <speak-char idTarget="ProfPlastico">¿Seguro? Estoy aquí para cualquier duda que tengas.</speak-char>
       <condition />
       <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="ChicoCafeteriaDialogo">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="ChicoCafeteria">Acabo de encontrar un tupper lleno de comida, pero está en mal estado.</speak-char>
+      <condition />
+      <speak-char idTarget="ChicoCafeteria">¿Qué puedo hacer con ello?</speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" showUserOption="yes" preListening="yes" editor-x="640" editor-y="50" x="640" y="50">
+      <speak-player>Tíralo todo al contenedor amarillo.</speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>Separa los restos. Tira la comida al contenedor marrón y el tupper al amarillo.</speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>La comida tírala al de orgánico. El tupper se puede aprovechar con una limpiadita.</speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="1124" editor-y="50">
+      <speak-char idTarget="ChicoCafeteria">Eso no me inspira mucha confianza, pero si tú lo dices…</speak-char>
+      <condition />
+      <end-conversation>
+        <effect>
+          <show-text x="585" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="1124" editor-y="244">
+      <speak-char idTarget="ChicoCafeteria">Sí, eso me parece lo más lógico ¡Gracias!</speak-char>
+      <condition />
+      <end-conversation>
+        <effect>
+          <increment var="eventosHechos" value="1" />
+          <condition />
+          <show-text x="585" y="800" frontColor="#FFB900FF" borderColor="#000000FF" uri="">CASI BIEN</show-text>
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="1124" editor-y="438">
+      <speak-char idTarget="ChicoCafeteria">¡Qué buena idea! Así la comida se convierte en compost y el tupper se reutiliza sin necesidad de reciclarlo.</speak-char>
+      <condition />
+      <end-conversation>
+        <effect>
+          <increment var="eventosHechos" value="2" />
+          <condition />
+          <show-text x="585" y="800" frontColor="#00FF00FF" borderColor="#000000FF" uri="">BIEN</show-text>
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="PasilloDialogo">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="ChicaPasillo">#! ¡Va a envases!</speak-char>
+      <condition />
+      <speak-char idTarget="ChicoPasillo">#! ¡No!¡Va en cartón!</speak-char>
+      <condition />
+      <speak-player>¿Tenéis algún problema?</speak-player>
+      <condition />
+      <speak-char idTarget="ChicaPasillo">Sí, he encontrado un brik de batido de chocolate, y creo que va en envases…</speak-char>
+      <condition />
+      <speak-char idTarget="ChicoPasillo">#! ¡EN CARTÓN!</speak-char>
+      <condition />
+      <speak-char idTarget="ChicaPasillo">... y el pesado de mi hermano dice que va en cartón, pero yo creo que no.</speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" showUserOption="yes" preListening="yes" editor-x="453" editor-y="50" x="453" y="50">
+      <speak-player>Tu hermano tiene razón. Los briks van en el azul con el cartón.</speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>Tienes razón tú, los briks van en el amarillo.</speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>¿De batido? Eso va en orgánico porque está manchado ya.</speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="1108" editor-y="50">
+      <speak-char idTarget="ChicoPasillo">¿Ves como siempre tengo razón?</speak-char>
+      <condition />
+      <speak-char idTarget="ChicaPasillo">Lo que no tienes es idea ¡Que los briks son envases! Al amarillo que va, digáis lo que digáis.</speak-char>
+      <condition />
+      <end-conversation>
+        <effect>
+          <show-text x="585" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="1107" editor-y="278">
+      <speak-char idTarget="ChicaPasillo">Por fin alguien con cabeza que sabe que los briks son envases ¡Gracias!</speak-char>
+      <condition />
+      <speak-char idTarget="ChicoPasillo">Venga, va. Os doy la razón.</speak-char>
+      <condition />
+      <end-conversation>
+        <effect>
+          <increment var="eventosHechos" value="2" />
+          <condition />
+          <show-text x="585" y="800" frontColor="#00FF00FF" borderColor="#000000FF" uri="">BIEN</show-text>
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="1101" editor-y="522">
+      <speak-char idTarget="ChicoPasillo">¿Orgánico? ¿Tú estás seguro de eso?.</speak-char>
+      <condition />
+      <speak-char idTarget="ChicaPasillo">Ni de lejos es orgánico. Pero bueno, que al amarillo que lo tiro digáis lo que digáis.</speak-char>
+      <condition />
+      <end-conversation>
+        <effect>
+          <show-text x="585" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="PatioDialogo">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>¡Hola! ¿Tú también estás con el desafío del reciclaje?</speak-player>
+      <condition />
+      <speak-char idTarget="ChicaPatio">Sí, aunque ando algo perdida.</speak-char>
+      <condition />
+      <speak-char idTarget="ChicaPatio">Tengo aquí este vaso de cristal que se me ha roto, y no sé exáctamente dónde va.</speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" showUserOption="yes" preListening="yes" editor-x="401" editor-y="50" x="401" y="50">
+      <speak-player>Al de vidrio, claramente. Es el contenedor verde de ahí.</speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>Eso va al de envases.</speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>¿Tiene restos? Entonces va al orgánico.</speak-player>
+      <condition />
+      <child nodeindex="4" />
+      <speak-player>Eso va al punto limpio. Dáselo a algún profe.</speak-player>
+      <condition />
+      <child nodeindex="5" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="825" editor-y="50">
+      <speak-char idTarget="ChicaPatio">¡Cierto, donde las botellas! Aunque pensaba que aquí solo iba el vidrio...</speak-char>
+      <condition />
+      <end-conversation>
+        <effect>
+          <show-text x="585" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="825" editor-y="244">
+      <speak-char idTarget="ChicaPatio">¿Estás seguro? Bueno, yo lo tiro al verde que me suena más.</speak-char>
+      <condition />
+      <end-conversation>
+        <effect>
+          <show-text x="585" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="825" editor-y="438">
+      <speak-char idTarget="ChicaPatio">Buf. Andas tú peor que yo ¿eh? Creo que lo voy a llevar luego al punto limpio.</speak-char>
+      <condition />
+      <end-conversation>
+        <effect>
+          <show-text x="585" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="5" editor-x="825" editor-y="632">
+      <speak-char idTarget="ChicaPatio">¡Anda, claro! Que el cristal se tira aparte ¡Muchas gracias!</speak-char>
+      <condition />
+      <end-conversation>
+        <effect>
+          <increment var="eventosHechos" value="2" />
+          <condition />
+          <show-text x="585" y="800" frontColor="#00FF00FF" borderColor="#000000FF" uri="">BIEN</show-text>
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="Pasillo2Dialogo">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>#O Sales de la clase y ves cómo un alumno tira al suelo el envoltorio de una chocolatina. ¿Qué harás?</speak-player>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" showUserOption="yes" editor-x="641" editor-y="50" x="641" y="50">
+      <speak-player>Es su responsabilidad, no la mía (pasar).</speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>Llamarle la atención (confrontar).</speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>Recogerlo yo mismo (limpiar).</speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="1102" editor-y="50">
+      <speak-player>#O Pasas de largo sin hacer nada. Es problema de otro ¿O no?</speak-player>
+      <condition />
+      <end-conversation>
+        <effect>
+          <show-text x="585" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="1102" editor-y="244">
+      <speak-player>¡Eh, figura! Se te ha caído algo.</speak-player>
+      <condition />
+      <speak-player>#O El chico se da la vuelta y recoge el envoltorio mientras se disculpa algo avergonzado.</speak-player>
+      <condition />
+      <end-conversation>
+        <effect>
+          <increment var="eventosHechos" value="2" />
+          <condition />
+          <show-text x="585" y="800" frontColor="#00FF00FF" borderColor="#000000FF" uri="">BIEN</show-text>
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="1102" editor-y="438">
+      <speak-player>#O Te agachas y recoges tú mismo el envoltorio, aunque de poco sirve si ese otro chico no ha aprendido a no ensuciar.</speak-player>
+      <condition />
+      <end-conversation>
+        <effect>
+          <increment var="eventosHechos" value="1" />
+          <condition />
+          <show-text x="585" y="800" frontColor="#FFB900FF" borderColor="#000000FF" uri="">CASI BIEN</show-text>
+          <condition />
+        </effect>
+      </end-conversation>
     </dialogue-node>
   </graph-conversation>
   <slidescene id="EmpiezaColegio" start="no" idTarget="ClaseOrgánico" destinyX="-2147483648" destinyY="-2147483648" transitionTime="750" transitionType="5" next="new-scene" class="accesible" type="cutscene">
