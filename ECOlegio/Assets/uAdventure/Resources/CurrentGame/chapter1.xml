@@ -733,7 +733,7 @@
       <object-ref idTarget="BotellaAgua" x="756" y="417" scale="1" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
-  <scene id="Menu" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Menu" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -759,7 +759,7 @@
       <atrezzo-ref idTarget="BotonPlay" x="960" y="1080" scale="1" layer="0" />
     </atrezzo>
   </scene>
-  <scene id="NotasFinales" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="NotasFinales" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -768,6 +768,71 @@
     <name>
     </name>
     <default-initial-position x="400" y="450" />
+    <atrezzo>
+      <atrezzo-ref idTarget="Nota-a" x="950" y="986" scale="0.35" layer="9">
+        <condition>
+          <greater-than var="objetosRecogidos" value="56" />
+          <less-equals-than var="objetosRecogidos" value="63" />
+        </condition>
+      </atrezzo-ref>
+      <atrezzo-ref idTarget="Nota-a+" x="950" y="990" scale="0.35" layer="8">
+        <condition>
+          <greater-than var="objetosRecogidos" value="56" />
+          <less-equals-than var="objetosRecogidos" value="63" />
+          <equals var="eventosHechos" value="2" />
+        </condition>
+      </atrezzo-ref>
+      <atrezzo-ref idTarget="Nota-a++" x="950" y="986" scale="0.35" layer="7">
+        <condition>
+          <greater-than var="objetosRecogidos" value="63" />
+          <greater-than var="eventosHechos" value="2" />
+        </condition>
+      </atrezzo-ref>
+      <atrezzo-ref idTarget="Nota-b" x="950" y="986" scale="0.35" layer="6">
+        <condition>
+          <greater-than var="objetosRecogidos" value="49" />
+          <less-equals-than var="objetosRecogidos" value="56" />
+        </condition>
+      </atrezzo-ref>
+      <atrezzo-ref idTarget="Nota-b+" x="950" y="986" scale="0.35" layer="5">
+        <condition>
+          <greater-than var="objetosRecogidos" value="49" />
+          <less-equals-than var="objetosRecogidos" value="56" />
+          <equals var="eventosHechos" value="2" />
+        </condition>
+      </atrezzo-ref>
+      <atrezzo-ref idTarget="Nota-c" x="950" y="986" scale="0.35" layer="4">
+        <condition>
+          <greater-than var="objetosRecogidos" value="42" />
+          <less-equals-than var="objetosRecogidos" value="49" />
+        </condition>
+      </atrezzo-ref>
+      <atrezzo-ref idTarget="Nota-c+" x="950" y="986" scale="0.35" layer="3">
+        <condition>
+          <greater-than var="objetosRecogidos" value="42" />
+          <less-equals-than var="objetosRecogidos" value="49" />
+          <equals var="eventosHechos" value="2" />
+        </condition>
+      </atrezzo-ref>
+      <atrezzo-ref idTarget="Nota-d" x="950" y="986" scale="0.35" layer="2">
+        <condition>
+          <greater-than var="eventosHechos" value="35" />
+          <less-equals-than var="eventosHechos" value="42" />
+        </condition>
+      </atrezzo-ref>
+      <atrezzo-ref idTarget="Nota-d+" x="950" y="986" scale="0.35" layer="1">
+        <condition>
+          <greater-than var="objetosRecogidos" value="35" />
+          <less-equals-than var="objetosRecogidos" value="42" />
+          <equals var="eventosHechos" value="2" />
+        </condition>
+      </atrezzo-ref>
+      <atrezzo-ref idTarget="Nota-f" x="950" y="986" scale="0.35" layer="0">
+        <condition>
+          <less-equals-than var="objetosRecogidos" value="35" />
+        </condition>
+      </atrezzo-ref>
+    </atrezzo>
   </scene>
   <object id="Bocadillo" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
@@ -777,11 +842,32 @@
     <description>
       <name>
       </name>
-      <brief>
-      </brief>
-      <detailed>
-      </detailed>
+      <brief>Es un bocadillo en mal estado...</brief>
+      <detailed>Es un bocadillo en mal estado...</detailed>
     </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no" />
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profOrganicoDialogo2Fin" />
+        </condition>
+        <effect>
+          <remove-element idTarget="Bocadillo" />
+          <condition />
+          <generate-object idTarget="Bocadillo" />
+          <condition />
+        </effect>
+      </grab>
+      <give-to idTarget="ContenedorMarron" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profOrganicoDialogo2Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Bocadillo" />
+          <condition />
+        </effect>
+      </give-to>
+    </actions>
   </object>
   <object id="EspinaPescado" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
@@ -796,6 +882,29 @@
       <detailed>
       </detailed>
     </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no" />
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profOrganicoDialogo2Fin" />
+        </condition>
+        <effect>
+          <remove-element idTarget="EspinaPescado" />
+          <condition />
+          <generate-object idTarget="EspinaPescado" />
+          <condition />
+        </effect>
+      </grab>
+      <give-to idTarget="ContenedorMarron" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profOrganicoDialogo2Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="EspinaPescado" />
+          <condition />
+        </effect>
+      </give-to>
+    </actions>
   </object>
   <object id="Galletas" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
@@ -810,6 +919,29 @@
       <detailed>
       </detailed>
     </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no" />
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profOrganicoDialogo2Fin" />
+        </condition>
+        <effect>
+          <remove-element idTarget="Galletas" />
+          <condition />
+          <generate-object idTarget="Galletas" />
+          <condition />
+        </effect>
+      </grab>
+      <give-to idTarget="ContenedorMarron" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profOrganicoDialogo2Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Galletas" />
+          <condition />
+        </effect>
+      </give-to>
+    </actions>
   </object>
   <object id="PapelHigienico" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
@@ -824,6 +956,29 @@
       <detailed>
       </detailed>
     </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no" />
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profOrganicoDialogo2Fin" />
+        </condition>
+        <effect>
+          <remove-element idTarget="PapelHigienico" />
+          <condition />
+          <generate-object idTarget="PapelHigienico" />
+          <condition />
+        </effect>
+      </grab>
+      <give-to idTarget="ContenedorMarron" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profOrganicoDialogo2Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="PapelHigienico" />
+          <condition />
+        </effect>
+      </give-to>
+    </actions>
   </object>
   <object id="Platano" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
@@ -838,6 +993,29 @@
       <detailed>
       </detailed>
     </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no" />
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profOrganicoDialogo2Fin" />
+        </condition>
+        <effect>
+          <remove-element idTarget="Platano" />
+          <condition />
+          <generate-object idTarget="Platano" />
+          <condition />
+        </effect>
+      </grab>
+      <give-to idTarget="ContenedorMarron" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profOrganicoDialogo2Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Platano" />
+          <condition />
+        </effect>
+      </give-to>
+    </actions>
   </object>
   <object id="AvionPapel" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
@@ -852,6 +1030,29 @@
       <detailed>
       </detailed>
     </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no" />
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPapelDialogo2Fin" />
+        </condition>
+        <effect>
+          <remove-element idTarget="AvionPapel" />
+          <condition />
+          <generate-object idTarget="AvionPapel" />
+          <condition />
+        </effect>
+      </grab>
+      <give-to idTarget="ContenedorAzul" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPapelDialogo2Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="AvionPapel" />
+          <condition />
+        </effect>
+      </give-to>
+    </actions>
   </object>
   <object id="BolaPapel" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
@@ -866,6 +1067,29 @@
       <detailed>
       </detailed>
     </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no" />
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPapelDialogo2Fin" />
+        </condition>
+        <effect>
+          <remove-element idTarget="BolaPapel" />
+          <condition />
+          <generate-object idTarget="BolaPapel" />
+          <condition />
+        </effect>
+      </grab>
+      <give-to idTarget="ContenedorAzul" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPapelDialogo2Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="BolaPapel" />
+          <condition />
+        </effect>
+      </give-to>
+    </actions>
   </object>
   <object id="CajaGalletas" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
@@ -880,6 +1104,29 @@
       <detailed>
       </detailed>
     </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no" />
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPapelDialogo2Fin" />
+        </condition>
+        <effect>
+          <remove-element idTarget="CajaGalletas" />
+          <condition />
+          <generate-object idTarget="CajaGalletas" />
+          <condition />
+        </effect>
+      </grab>
+      <give-to idTarget="ContenedorAzul" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPapelDialogo2Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="CajaGalletas" />
+          <condition />
+        </effect>
+      </give-to>
+    </actions>
   </object>
   <object id="Periodico" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
@@ -894,6 +1141,29 @@
       <detailed>
       </detailed>
     </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no" />
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPapelDialogo2Fin" />
+        </condition>
+        <effect>
+          <remove-element idTarget="Periodico" />
+          <condition />
+          <generate-object idTarget="Periodico" />
+          <condition />
+        </effect>
+      </grab>
+      <give-to idTarget="ContenedorAzul" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profOrganicoDialogo2Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Periodico" />
+          <condition />
+        </effect>
+      </give-to>
+    </actions>
   </object>
   <object id="Revista" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
@@ -908,6 +1178,29 @@
       <detailed>
       </detailed>
     </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no" />
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPapelDialogo2Fin" />
+        </condition>
+        <effect>
+          <remove-element idTarget="Revista" />
+          <condition />
+          <generate-object idTarget="Revista" />
+          <condition />
+        </effect>
+      </grab>
+      <give-to idTarget="ContenedorAzul" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPapelDialogo2Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Revista" />
+          <condition />
+        </effect>
+      </give-to>
+    </actions>
   </object>
   <object id="BolsaPatatas" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
@@ -922,6 +1215,29 @@
       <detailed>
       </detailed>
     </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no" />
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPapelDialogo2Fin" />
+        </condition>
+        <effect>
+          <remove-element idTarget="BolsaPatatas" />
+          <condition />
+          <generate-object idTarget="BolsaPatatas" />
+          <condition />
+        </effect>
+      </grab>
+      <give-to idTarget="ContenedorAmarillo" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPlasticoDialogo2Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="BolsaPatatas" />
+          <condition />
+        </effect>
+      </give-to>
+    </actions>
   </object>
   <object id="BotellaAgua" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
@@ -936,6 +1252,29 @@
       <detailed>
       </detailed>
     </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no" />
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPlasticoDialogo2Fin" />
+        </condition>
+        <effect>
+          <remove-element idTarget="BotellaAgua" />
+          <condition />
+          <generate-object idTarget="BotellaAgua" />
+          <condition />
+        </effect>
+      </grab>
+      <give-to idTarget="ContenedorAmarillo" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPlasticoDialogo2Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="BotellaAgua" />
+          <condition />
+        </effect>
+      </give-to>
+    </actions>
   </object>
   <object id="BrickLeche" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
@@ -950,6 +1289,29 @@
       <detailed>
       </detailed>
     </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no" />
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPlasticoDialogo2Fin" />
+        </condition>
+        <effect>
+          <remove-element idTarget="BrickLeche" />
+          <condition />
+          <generate-object idTarget="BrickLeche" />
+          <condition />
+        </effect>
+      </grab>
+      <give-to idTarget="ContenedorAmarillo" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPlasticoDialogo2Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="BrickLeche" />
+          <condition />
+        </effect>
+      </give-to>
+    </actions>
   </object>
   <object id="BrickZumo" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
@@ -964,6 +1326,29 @@
       <detailed>
       </detailed>
     </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no" />
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPlasticoDialogo2Fin" />
+        </condition>
+        <effect>
+          <remove-element idTarget="BrickZumo" />
+          <condition />
+          <generate-object idTarget="BrickZumo" />
+          <condition />
+        </effect>
+      </grab>
+      <give-to idTarget="ContenedorAmarillo" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPlasticoDialogo2Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="BrickZumo" />
+          <condition />
+        </effect>
+      </give-to>
+    </actions>
   </object>
   <object id="LataRefresco" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
@@ -978,6 +1363,29 @@
       <detailed>
       </detailed>
     </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no" />
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPlasticoDialogo2Fin" />
+        </condition>
+        <effect>
+          <remove-element idTarget="LataRefresco" />
+          <condition />
+          <generate-object idTarget="LataRefresco" />
+          <condition />
+        </effect>
+      </grab>
+      <give-to idTarget="ContenedorAmarillo" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPlasticoDialogo2Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="LataRefresco" />
+          <condition />
+        </effect>
+      </give-to>
+    </actions>
   </object>
   <object id="BotellaAlcohol" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
@@ -992,6 +1400,29 @@
       <detailed>
       </detailed>
     </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no" />
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profVidrioDialogo2Fin" />
+        </condition>
+        <effect>
+          <remove-element idTarget="BotellaAlcohol" />
+          <condition />
+          <generate-object idTarget="BotellaAlcohol" />
+          <condition />
+        </effect>
+      </grab>
+      <give-to idTarget="ContenedorVerde" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profVidrioDialogo2Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="BotellaAlcohol" />
+          <condition />
+        </effect>
+      </give-to>
+    </actions>
   </object>
   <object id="BotellaCola" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
@@ -1006,6 +1437,29 @@
       <detailed>
       </detailed>
     </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no" />
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profVidrioDialogo2Fin" />
+        </condition>
+        <effect>
+          <remove-element idTarget="BotellaCola" />
+          <condition />
+          <generate-object idTarget="BotellaCola" />
+          <condition />
+        </effect>
+      </grab>
+      <give-to idTarget="ContenedorVerde" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profVidrioDialogo2Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="BotellaCola" />
+          <condition />
+        </effect>
+      </give-to>
+    </actions>
   </object>
   <object id="Potito" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
@@ -1020,6 +1474,29 @@
       <detailed>
       </detailed>
     </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no" />
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profVidrioDialogo2Fin" />
+        </condition>
+        <effect>
+          <remove-element idTarget="Potito" />
+          <condition />
+          <generate-object idTarget="Potito" />
+          <condition />
+        </effect>
+      </grab>
+      <give-to idTarget="ContenedorVerde" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profVidrioDialogo2Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Potito" />
+          <condition />
+        </effect>
+      </give-to>
+    </actions>
   </object>
   <object id="Probeta" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
@@ -1034,6 +1511,29 @@
       <detailed>
       </detailed>
     </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no" />
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profVidrioDialogo2Fin" />
+        </condition>
+        <effect>
+          <remove-element idTarget="Probeta" />
+          <condition />
+          <generate-object idTarget="Probeta" />
+          <condition />
+        </effect>
+      </grab>
+      <give-to idTarget="ContenedorVerde" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profVidrioDialogo2Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Probeta" />
+          <condition />
+        </effect>
+      </give-to>
+    </actions>
   </object>
   <object id="Tarro" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
@@ -1048,6 +1548,29 @@
       <detailed>
       </detailed>
     </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no" />
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profVidrioDialogo2Fin" />
+        </condition>
+        <effect>
+          <remove-element idTarget="Tarro" />
+          <condition />
+          <generate-object idTarget="Tarro" />
+          <condition />
+        </effect>
+      </grab>
+      <give-to idTarget="ContenedorVerde" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profVidrioDialogo2Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Tarro" />
+          <condition />
+        </effect>
+      </give-to>
+    </actions>
   </object>
   <object id="CartelSueloMojado" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
@@ -1062,6 +1585,29 @@
       <detailed>
       </detailed>
     </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no" />
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profVidrioDialogo2Fin" />
+        </condition>
+        <effect>
+          <remove-element idTarget="CartelSueloMojado" />
+          <condition />
+          <generate-object idTarget="CartelSueloMojado" />
+          <condition />
+        </effect>
+      </grab>
+      <give-to idTarget="ContenedorVerde" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profVidrioDialogo2Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="CartelSueloMojado" />
+          <condition />
+        </effect>
+      </give-to>
+    </actions>
   </object>
   <atrezzoobject id="FondoOrganico">
     <resources name="No name">
@@ -1122,6 +1668,146 @@
   <atrezzoobject id="BotonPlay">
     <resources name="No name">
       <asset type="image" uri="assets/image/boton-de-jugar.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="Nota-a">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/a.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="Nota-a+">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/a+.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="Nota-a++">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/a++1.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="Nota-b">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/b.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="Nota-b+">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/b+.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="Nota-c">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/c.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="Nota-c+">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/c+.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="Nota-d">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/d.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="Nota-d+">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/d+.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="Nota-f">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/f.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
