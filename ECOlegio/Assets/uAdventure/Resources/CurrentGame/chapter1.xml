@@ -727,7 +727,7 @@
       <object-ref idTarget="LataRefresco" x="368" y="551" scale="1" layer="10" hasInfluenceArea="no" />
       <object-ref idTarget="AvionPapel" x="1678" y="871" scale="1" layer="9" hasInfluenceArea="no" />
       <object-ref idTarget="Revista" x="768" y="899" scale="1" layer="8" hasInfluenceArea="no" />
-      <object-ref idTarget="Platano" x="1172" y="843" scale="1" layer="7" hasInfluenceArea="no" />
+      <object-ref idTarget="Platano" x="1268" y="828" scale="1" layer="7" hasInfluenceArea="no" />
       <object-ref idTarget="EspinaPescado" x="1623" y="739" scale="1" layer="6" hasInfluenceArea="no" />
       <object-ref idTarget="BolsaPatatas" x="1918" y="891" scale="1" layer="5" hasInfluenceArea="no" />
     </objects>
@@ -977,68 +977,71 @@
     <name>
     </name>
     <default-initial-position x="400" y="450" />
+    <characters>
+      <character-ref idTarget="ProfOrganico" x="956" y="-87" scale="0.872093" orientation="2" layer="0" hasInfluenceArea="no" />
+    </characters>
     <atrezzo>
-      <atrezzo-ref idTarget="Nota-a" x="950" y="986" scale="0.35" layer="9">
+      <atrezzo-ref idTarget="Nota-a" x="950" y="986" scale="0.35" layer="10">
         <condition>
-          <greater-than var="objetosRecogidos" value="56" />
-          <less-equals-than var="objetosRecogidos" value="63" />
+          <greater-than var="objetosRecogidos" value="32" />
+          <less-equals-than var="objetosRecogidos" value="36" />
         </condition>
       </atrezzo-ref>
-      <atrezzo-ref idTarget="Nota-a+" x="950" y="990" scale="0.35" layer="8">
+      <atrezzo-ref idTarget="Nota-a+" x="950" y="990" scale="0.35" layer="9">
         <condition>
-          <greater-than var="objetosRecogidos" value="56" />
-          <less-equals-than var="objetosRecogidos" value="63" />
-          <equals var="eventosHechos" value="2" />
+          <greater-than var="objetosRecogidos" value="32" />
+          <less-equals-than var="objetosRecogidos" value="36" />
+          <greater-equals-than var="eventosHechos" value="4" />
         </condition>
       </atrezzo-ref>
-      <atrezzo-ref idTarget="Nota-a++" x="950" y="986" scale="0.35" layer="7">
+      <atrezzo-ref idTarget="Nota-a++" x="950" y="986" scale="0.35" layer="8">
         <condition>
-          <greater-than var="objetosRecogidos" value="63" />
-          <greater-than var="eventosHechos" value="2" />
+          <greater-than var="objetosRecogidos" value="36" />
+          <greater-than var="eventosHechos" value="4" />
         </condition>
       </atrezzo-ref>
-      <atrezzo-ref idTarget="Nota-b" x="950" y="986" scale="0.35" layer="6">
+      <atrezzo-ref idTarget="Nota-b" x="950" y="986" scale="0.35" layer="7">
         <condition>
-          <greater-than var="objetosRecogidos" value="49" />
-          <less-equals-than var="objetosRecogidos" value="56" />
+          <greater-than var="objetosRecogidos" value="28" />
+          <less-equals-than var="objetosRecogidos" value="32" />
         </condition>
       </atrezzo-ref>
-      <atrezzo-ref idTarget="Nota-b+" x="950" y="986" scale="0.35" layer="5">
+      <atrezzo-ref idTarget="Nota-b+" x="950" y="986" scale="0.35" layer="6">
         <condition>
-          <greater-than var="objetosRecogidos" value="49" />
-          <less-equals-than var="objetosRecogidos" value="56" />
-          <equals var="eventosHechos" value="2" />
+          <greater-than var="objetosRecogidos" value="28" />
+          <less-equals-than var="objetosRecogidos" value="32" />
+          <greater-equals-than var="eventosHechos" value="4" />
         </condition>
       </atrezzo-ref>
-      <atrezzo-ref idTarget="Nota-c" x="950" y="986" scale="0.35" layer="4">
+      <atrezzo-ref idTarget="Nota-c" x="950" y="986" scale="0.35" layer="5">
         <condition>
-          <greater-than var="objetosRecogidos" value="42" />
-          <less-equals-than var="objetosRecogidos" value="49" />
+          <greater-than var="objetosRecogidos" value="24" />
+          <less-equals-than var="objetosRecogidos" value="28" />
         </condition>
       </atrezzo-ref>
-      <atrezzo-ref idTarget="Nota-c+" x="950" y="986" scale="0.35" layer="3">
+      <atrezzo-ref idTarget="Nota-c+" x="950" y="986" scale="0.35" layer="4">
         <condition>
-          <greater-than var="objetosRecogidos" value="42" />
-          <less-equals-than var="objetosRecogidos" value="49" />
-          <equals var="eventosHechos" value="2" />
+          <greater-than var="objetosRecogidos" value="24" />
+          <less-equals-than var="objetosRecogidos" value="28" />
+          <greater-equals-than var="eventosHechos" value="4" />
         </condition>
       </atrezzo-ref>
-      <atrezzo-ref idTarget="Nota-d" x="950" y="986" scale="0.35" layer="2">
+      <atrezzo-ref idTarget="Nota-d" x="950" y="986" scale="0.35" layer="3">
         <condition>
-          <greater-than var="eventosHechos" value="35" />
-          <less-equals-than var="eventosHechos" value="42" />
+          <greater-than var="eventosHechos" value="20" />
+          <less-equals-than var="eventosHechos" value="24" />
         </condition>
       </atrezzo-ref>
-      <atrezzo-ref idTarget="Nota-d+" x="950" y="986" scale="0.35" layer="1">
+      <atrezzo-ref idTarget="Nota-d+" x="950" y="986" scale="0.35" layer="2">
         <condition>
-          <greater-than var="objetosRecogidos" value="35" />
-          <less-equals-than var="objetosRecogidos" value="42" />
-          <equals var="eventosHechos" value="2" />
+          <greater-than var="objetosRecogidos" value="20" />
+          <less-equals-than var="objetosRecogidos" value="24" />
+          <greater-equals-than var="eventosHechos" value="4" />
         </condition>
       </atrezzo-ref>
-      <atrezzo-ref idTarget="Nota-f" x="950" y="986" scale="0.35" layer="0">
+      <atrezzo-ref idTarget="Nota-f" x="950" y="986" scale="0.35" layer="1">
         <condition>
-          <less-equals-than var="objetosRecogidos" value="35" />
+          <less-equals-than var="objetosRecogidos" value="20" />
         </condition>
       </atrezzo-ref>
     </atrezzo>
@@ -1072,6 +1075,49 @@
         </condition>
         <effect>
           <consume-object idTarget="Bocadillo" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#00FF00FF" borderColor="#000000FF" uri="">BIEN</show-text>
+          <condition />
+          <increment var="objetosRecogidos" value="2" />
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAzul" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profOrganicoDialogo2Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Bocadillo" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorVerde" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profOrganicoDialogo2Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Bocadillo" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAmarillo" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profOrganicoDialogo2Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Bocadillo" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
           <condition />
         </effect>
       </give-to>
@@ -1107,6 +1153,49 @@
         <effect>
           <consume-object idTarget="EspinaPescado" />
           <condition />
+          <increment var="objetosRecogidos" value="2" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#00FF00FF" borderColor="#000000FF" uri="">BIEN</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAmarillo" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profOrganicoDialogo2Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="EspinaPescado" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorVerde" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profOrganicoDialogo2Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="EspinaPescado" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAzul" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profOrganicoDialogo2Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="EspinaPescado" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
         </effect>
       </give-to>
     </actions>
@@ -1140,6 +1229,49 @@
         </condition>
         <effect>
           <consume-object idTarget="Galletas" />
+          <condition />
+          <increment var="objetosRecogidos" value="2" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#0FF00FFF" borderColor="#000000FF" uri="">BIEN</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAmarillo" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profOrganicoDialogo2Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Galletas" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorVerde" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profOrganicoDialogo2Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Galletas" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAzul" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profOrganicoDialogo2Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Galletas" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
           <condition />
         </effect>
       </give-to>
@@ -1175,6 +1307,49 @@
         <effect>
           <consume-object idTarget="PapelHigienico" />
           <condition />
+          <increment var="objetosRecogidos" value="2" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#00FF00FF" borderColor="#000000FF" uri="">BIEN</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAmarillo" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profOrganicoDialogo2Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="PapelHigienico" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorVerde" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profOrganicoDialogo2Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="PapelHigienico" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAzul" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profOrganicoDialogo2Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="PapelHigienico" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
         </effect>
       </give-to>
     </actions>
@@ -1209,6 +1384,49 @@
         <effect>
           <consume-object idTarget="Platano" />
           <condition />
+          <increment var="objetosRecogidos" value="2" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#00FF00FF" borderColor="#000000FF" uri="">BIEN</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAmarillo" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profOrganicoDialogo2Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Platano" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorVerde" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profOrganicoDialogo2Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Platano" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAzul" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profOrganicoDialogo2Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Platano" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
         </effect>
       </give-to>
     </actions>
@@ -1227,7 +1445,7 @@
       <examine needsGoTo="no" keepDistance="0" not-effects="no" />
       <grab needsGoTo="yes" keepDistance="35" not-effects="no">
         <condition>
-          <active flag="profPapelDialogo2Fin" />
+          <active flag="profPapelDialogo1Fin" />
         </condition>
         <effect>
           <remove-element idTarget="AvionPapel" />
@@ -1238,10 +1456,53 @@
       </grab>
       <give-to idTarget="ContenedorAzul" needsGoTo="yes" keepDistance="35" not-effects="no">
         <condition>
-          <active flag="profPapelDialogo2Fin" />
+          <active flag="profPapelDialogo1Fin" />
         </condition>
         <effect>
           <consume-object idTarget="AvionPapel" />
+          <condition />
+          <increment var="objetosRecogidos" value="2" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#00FF00FF" borderColor="#000000FF" uri="">BIEN</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAmarillo" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPapelDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="AvionPapel" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorVerde" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPapelDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="AvionPapel" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorMarron" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPapelDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="AvionPapel" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
           <condition />
         </effect>
       </give-to>
@@ -1261,21 +1522,68 @@
       <examine needsGoTo="no" keepDistance="0" not-effects="no" />
       <grab needsGoTo="yes" keepDistance="35" not-effects="no">
         <condition>
-          <active flag="profPapelDialogo2Fin" />
+          <active flag="profPapelDialogo1Fin" />
         </condition>
         <effect>
           <remove-element idTarget="BolaPapel" />
           <condition />
           <generate-object idTarget="BolaPapel" />
           <condition />
+          <increment var="objetosRecogidos" value="2" />
+          <condition />
+          <show-text x="585" y="800" frontColor="#00FF00FF" borderColor="#000000FF" uri="">BIEN</show-text>
+          <condition />
         </effect>
       </grab>
       <give-to idTarget="ContenedorAzul" needsGoTo="yes" keepDistance="35" not-effects="no">
         <condition>
-          <active flag="profPapelDialogo2Fin" />
+          <active flag="profPapelDialogo1Fin" />
         </condition>
         <effect>
           <consume-object idTarget="BolaPapel" />
+          <condition />
+          <increment var="objetosRecogidos" value="2" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#00FF00FF" borderColor="#000000FF" uri="">BIEN</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAmarillo" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPapelDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="BolaPapel" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorVerde" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPapelDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="BolaPapel" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorMarron" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPapelDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="BolaPapel" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
           <condition />
         </effect>
       </give-to>
@@ -1295,7 +1603,7 @@
       <examine needsGoTo="no" keepDistance="0" not-effects="no" />
       <grab needsGoTo="yes" keepDistance="35" not-effects="no">
         <condition>
-          <active flag="profPapelDialogo2Fin" />
+          <active flag="profPapelDialogo1Fin" />
         </condition>
         <effect>
           <remove-element idTarget="CajaGalletas" />
@@ -1306,10 +1614,53 @@
       </grab>
       <give-to idTarget="ContenedorAzul" needsGoTo="yes" keepDistance="35" not-effects="no">
         <condition>
-          <active flag="profPapelDialogo2Fin" />
+          <active flag="profPapelDialogo1Fin" />
         </condition>
         <effect>
           <consume-object idTarget="CajaGalletas" />
+          <condition />
+          <increment var="objetosRecogidos" value="2" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#00FF00FF" borderColor="#000000FF" uri="">BIEN</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAmarillo" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPapelDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="CajaGalletas" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorVerde" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPapelDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="CajaGalletas" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorMarron" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPapelDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="CajaGalletas" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
           <condition />
         </effect>
       </give-to>
@@ -1329,7 +1680,7 @@
       <examine needsGoTo="no" keepDistance="0" not-effects="no" />
       <grab needsGoTo="yes" keepDistance="35" not-effects="no">
         <condition>
-          <active flag="profPapelDialogo2Fin" />
+          <active flag="profPapelDialogo1Fin" />
         </condition>
         <effect>
           <remove-element idTarget="Periodico" />
@@ -1340,10 +1691,53 @@
       </grab>
       <give-to idTarget="ContenedorAzul" needsGoTo="yes" keepDistance="35" not-effects="no">
         <condition>
-          <active flag="profOrganicoDialogo2Fin" />
+          <active flag="profPapelDialogo1Fin" />
         </condition>
         <effect>
           <consume-object idTarget="Periodico" />
+          <condition />
+          <increment var="objetosRecogidos" value="2" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#00FF00FF" borderColor="#000000FF" uri="">BIEN</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAmarillo" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPapelDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Periodico" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorVerde" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPapelDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Periodico" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorMarron" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPapelDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Periodico" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
           <condition />
         </effect>
       </give-to>
@@ -1363,7 +1757,7 @@
       <examine needsGoTo="no" keepDistance="0" not-effects="no" />
       <grab needsGoTo="yes" keepDistance="35" not-effects="no">
         <condition>
-          <active flag="profPapelDialogo2Fin" />
+          <active flag="profPapelDialogo1Fin" />
         </condition>
         <effect>
           <remove-element idTarget="Revista" />
@@ -1374,10 +1768,53 @@
       </grab>
       <give-to idTarget="ContenedorAzul" needsGoTo="yes" keepDistance="35" not-effects="no">
         <condition>
-          <active flag="profPapelDialogo2Fin" />
+          <active flag="profPapelDialogo1Fin" />
         </condition>
         <effect>
           <consume-object idTarget="Revista" />
+          <condition />
+          <increment var="objetosRecogidos" value="2" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#00FF00FF" borderColor="#000000FF" uri="">BIEN</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAmarillo" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPapelDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Revista" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorVerde" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPapelDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Revista" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorMarron" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPapelDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Revista" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
           <condition />
         </effect>
       </give-to>
@@ -1397,7 +1834,7 @@
       <examine needsGoTo="no" keepDistance="0" not-effects="no" />
       <grab needsGoTo="yes" keepDistance="35" not-effects="no">
         <condition>
-          <active flag="profPapelDialogo2Fin" />
+          <active flag="profPlasticoDialogo1Fin" />
         </condition>
         <effect>
           <remove-element idTarget="BolsaPatatas" />
@@ -1408,10 +1845,53 @@
       </grab>
       <give-to idTarget="ContenedorAmarillo" needsGoTo="yes" keepDistance="35" not-effects="no">
         <condition>
-          <active flag="profPlasticoDialogo2Fin" />
+          <active flag="profPlasticoDialogo1Fin" />
         </condition>
         <effect>
           <consume-object idTarget="BolsaPatatas" />
+          <condition />
+          <increment var="objetosRecogidos" value="2" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#00FF00FF" borderColor="#000000FF" uri="">BIEN</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorVerde" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPlasticoDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="BolsaPatatas" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAzul" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPlasticoDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="BolsaPatatas" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorMarron" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPlasticoDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="BolsaPatatas" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
           <condition />
         </effect>
       </give-to>
@@ -1431,7 +1911,7 @@
       <examine needsGoTo="no" keepDistance="0" not-effects="no" />
       <grab needsGoTo="yes" keepDistance="35" not-effects="no">
         <condition>
-          <active flag="profPlasticoDialogo2Fin" />
+          <active flag="profPlasticoDialogo1Fin" />
         </condition>
         <effect>
           <remove-element idTarget="BotellaAgua" />
@@ -1442,10 +1922,53 @@
       </grab>
       <give-to idTarget="ContenedorAmarillo" needsGoTo="yes" keepDistance="35" not-effects="no">
         <condition>
-          <active flag="profPlasticoDialogo2Fin" />
+          <active flag="profPlasticoDialogo1Fin" />
         </condition>
         <effect>
           <consume-object idTarget="BotellaAgua" />
+          <condition />
+          <increment var="objetosRecogidos" value="2" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#00FF00FF" borderColor="#000000FF" uri="">BIEN</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorVerde" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPlasticoDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="BotellaAgua" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAzul" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPlasticoDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="BotellaAgua" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorMarron" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPlasticoDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="BotellaAgua" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
           <condition />
         </effect>
       </give-to>
@@ -1465,7 +1988,7 @@
       <examine needsGoTo="no" keepDistance="0" not-effects="no" />
       <grab needsGoTo="yes" keepDistance="35" not-effects="no">
         <condition>
-          <active flag="profPlasticoDialogo2Fin" />
+          <active flag="profPlasticoDialogo1Fin" />
         </condition>
         <effect>
           <remove-element idTarget="BrickLeche" />
@@ -1476,10 +1999,53 @@
       </grab>
       <give-to idTarget="ContenedorAmarillo" needsGoTo="yes" keepDistance="35" not-effects="no">
         <condition>
-          <active flag="profPlasticoDialogo2Fin" />
+          <active flag="profPlasticoDialogo1Fin" />
         </condition>
         <effect>
           <consume-object idTarget="BrickLeche" />
+          <condition />
+          <increment var="objetosRecogidos" value="2" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#00FF00FF" borderColor="#000000FF" uri="">BIEN</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorVerde" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPlasticoDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="BrickLeche" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAzul" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPlasticoDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="BrickLeche" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorMarron" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPlasticoDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="BrickLeche" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
           <condition />
         </effect>
       </give-to>
@@ -1499,7 +2065,7 @@
       <examine needsGoTo="no" keepDistance="0" not-effects="no" />
       <grab needsGoTo="yes" keepDistance="35" not-effects="no">
         <condition>
-          <active flag="profPlasticoDialogo2Fin" />
+          <active flag="profPlasticoDialogo1Fin" />
         </condition>
         <effect>
           <remove-element idTarget="BrickZumo" />
@@ -1510,10 +2076,53 @@
       </grab>
       <give-to idTarget="ContenedorAmarillo" needsGoTo="yes" keepDistance="35" not-effects="no">
         <condition>
-          <active flag="profPlasticoDialogo2Fin" />
+          <active flag="profPlasticoDialogo1Fin" />
         </condition>
         <effect>
           <consume-object idTarget="BrickZumo" />
+          <condition />
+          <increment var="objetosRecogidos" value="2" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#00FF00FF" borderColor="#000000FF" uri="">BIEN</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorVerde" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPlasticoDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="BrickZumo" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAzul" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPlasticoDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="BrickZumo" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorMarron" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPlasticoDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="BrickZumo" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
           <condition />
         </effect>
       </give-to>
@@ -1533,7 +2142,7 @@
       <examine needsGoTo="no" keepDistance="0" not-effects="no" />
       <grab needsGoTo="yes" keepDistance="35" not-effects="no">
         <condition>
-          <active flag="profPlasticoDialogo2Fin" />
+          <active flag="profPlasticoDialogo1Fin" />
         </condition>
         <effect>
           <remove-element idTarget="LataRefresco" />
@@ -1544,10 +2153,53 @@
       </grab>
       <give-to idTarget="ContenedorAmarillo" needsGoTo="yes" keepDistance="35" not-effects="no">
         <condition>
-          <active flag="profPlasticoDialogo2Fin" />
+          <active flag="profPlasticoDialogo1Fin" />
         </condition>
         <effect>
           <consume-object idTarget="LataRefresco" />
+          <condition />
+          <increment var="objetosRecogidos" value="2" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#00FF00FF" borderColor="#000000FF" uri="">BIEN</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorVerde" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPlasticoDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="LataRefresco" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAzul" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPlasticoDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="LataRefresco" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorMarron" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPlasticoDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="LataRefresco" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
           <condition />
         </effect>
       </give-to>
@@ -1567,7 +2219,7 @@
       <examine needsGoTo="no" keepDistance="0" not-effects="no" />
       <grab needsGoTo="yes" keepDistance="35" not-effects="no">
         <condition>
-          <active flag="profVidrioDialogo2Fin" />
+          <active flag="profVidrioDialogo1Fin" />
         </condition>
         <effect>
           <remove-element idTarget="BotellaAlcohol" />
@@ -1578,10 +2230,53 @@
       </grab>
       <give-to idTarget="ContenedorVerde" needsGoTo="yes" keepDistance="35" not-effects="no">
         <condition>
-          <active flag="profVidrioDialogo2Fin" />
+          <active flag="profVidrioDialogo1Fin" />
         </condition>
         <effect>
           <consume-object idTarget="BotellaAlcohol" />
+          <condition />
+          <increment var="objetosRecogidos" value="2" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#00FF00FF" borderColor="#000000FF" uri="">BIEN</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAmarillo" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profVidrioDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="BotellaAlcohol" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAzul" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profVidrioDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="BotellaAlcohol" />
+          <condition />
+          <increment var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorMarron" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profVidrioDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="BotellaAlcohol" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
           <condition />
         </effect>
       </give-to>
@@ -1601,7 +2296,7 @@
       <examine needsGoTo="no" keepDistance="0" not-effects="no" />
       <grab needsGoTo="yes" keepDistance="35" not-effects="no">
         <condition>
-          <active flag="profVidrioDialogo2Fin" />
+          <active flag="profVidrioDialogo1Fin" />
         </condition>
         <effect>
           <remove-element idTarget="BotellaCola" />
@@ -1612,10 +2307,53 @@
       </grab>
       <give-to idTarget="ContenedorVerde" needsGoTo="yes" keepDistance="35" not-effects="no">
         <condition>
-          <active flag="profVidrioDialogo2Fin" />
+          <active flag="profVidrioDialogo1Fin" />
         </condition>
         <effect>
           <consume-object idTarget="BotellaCola" />
+          <condition />
+          <increment var="objetosRecogidos" value="2" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#00FF00FF" borderColor="#000000FF" uri="">BIEN</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAmarillo" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profVidrioDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="BotellaCola" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAzul" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profVidrioDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="BotellaCola" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorMarron" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profVidrioDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="BotellaCola" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
           <condition />
         </effect>
       </give-to>
@@ -1635,7 +2373,7 @@
       <examine needsGoTo="no" keepDistance="0" not-effects="no" />
       <grab needsGoTo="yes" keepDistance="35" not-effects="no">
         <condition>
-          <active flag="profVidrioDialogo2Fin" />
+          <active flag="profVidrioDialogo1Fin" />
         </condition>
         <effect>
           <remove-element idTarget="Potito" />
@@ -1646,10 +2384,53 @@
       </grab>
       <give-to idTarget="ContenedorVerde" needsGoTo="yes" keepDistance="35" not-effects="no">
         <condition>
-          <active flag="profVidrioDialogo2Fin" />
+          <active flag="profVidrioDialogo1Fin" />
         </condition>
         <effect>
           <consume-object idTarget="Potito" />
+          <condition />
+          <increment var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#00FF00FF" borderColor="#000000FF" uri="">BIEN</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAmarillo" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profVidrioDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Potito" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAzul" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profVidrioDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Potito" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorMarron" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profVidrioDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Potito" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
           <condition />
         </effect>
       </give-to>
@@ -1669,7 +2450,7 @@
       <examine needsGoTo="no" keepDistance="0" not-effects="no" />
       <grab needsGoTo="yes" keepDistance="35" not-effects="no">
         <condition>
-          <active flag="profVidrioDialogo2Fin" />
+          <active flag="profVidrioDialogo1Fin" />
         </condition>
         <effect>
           <remove-element idTarget="Probeta" />
@@ -1680,10 +2461,53 @@
       </grab>
       <give-to idTarget="ContenedorVerde" needsGoTo="yes" keepDistance="35" not-effects="no">
         <condition>
-          <active flag="profVidrioDialogo2Fin" />
+          <active flag="profVidrioDialogo1Fin" />
         </condition>
         <effect>
           <consume-object idTarget="Probeta" />
+          <condition />
+          <increment var="objetosRecogidos" value="2" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#00FF00FF" borderColor="#000000FF" uri="">BIEN</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAmarillo" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profVidrioDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Probeta" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAzul" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profVidrioDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Probeta" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorMarron" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profVidrioDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Probeta" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
           <condition />
         </effect>
       </give-to>
@@ -1703,7 +2527,7 @@
       <examine needsGoTo="no" keepDistance="0" not-effects="no" />
       <grab needsGoTo="yes" keepDistance="35" not-effects="no">
         <condition>
-          <active flag="profVidrioDialogo2Fin" />
+          <active flag="profVidrioDialogo1Fin" />
         </condition>
         <effect>
           <remove-element idTarget="Tarro" />
@@ -1714,10 +2538,53 @@
       </grab>
       <give-to idTarget="ContenedorVerde" needsGoTo="yes" keepDistance="35" not-effects="no">
         <condition>
-          <active flag="profVidrioDialogo2Fin" />
+          <active flag="profVidrioDialogo1Fin" />
         </condition>
         <effect>
           <consume-object idTarget="Tarro" />
+          <condition />
+          <increment var="objetosRecogidos" value="2" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#00FF00FF" borderColor="#000000FF" uri="">BIEN</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAmarillo" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profVidrioDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Tarro" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAzul" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profVidrioDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Tarro" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorMarron" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profVidrioDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Tarro" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
           <condition />
         </effect>
       </give-to>
@@ -2015,6 +2882,9 @@
       <speak-player>No tengo más preguntas.</speak-player>
       <condition />
       <child nodeindex="5" />
+      <speak-player>He terminado de recoger toda la basura.</speak-player>
+      <condition />
+      <child nodeindex="6" />
     </option-node>
     <dialogue-node nodeindex="2" editor-x="1118" editor-y="12">
       <speak-char idTarget="ProfOrganico">Se considera como restos orgánicos a los alimentos en general: pescados, carnes, frutas y verduras, y similares.</speak-char>
@@ -2033,6 +2903,38 @@
     </dialogue-node>
     <dialogue-node nodeindex="5" editor-x="1128" editor-y="588">
       <speak-char idTarget="ProfOrganico">Perfecto ¡pues vamos a ello!</speak-char>
+      <condition />
+      <speak-char idTarget="ProfOrganico">Recuerda que tienes que venir a verme cuando hayas terminado.</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+    <dialogue-node nodeindex="6" editor-x="591" editor-y="483">
+      <speak-char idTarget="ProfOrganico">¿Estás seguro de que no te has dejado nada por ahí?</speak-char>
+      <condition />
+      <child nodeindex="7" />
+    </dialogue-node>
+    <option-node nodeindex="7" showUserOption="yes" preListening="yes" editor-x="820" editor-y="700" x="820" y="700">
+      <speak-player>Si.</speak-player>
+      <condition />
+      <child nodeindex="8" />
+      <speak-player>No.</speak-player>
+      <condition />
+      <child nodeindex="9" />
+    </option-node>
+    <dialogue-node nodeindex="8" editor-x="1327" editor-y="787">
+      <speak-char idTarget="ProfOrganico">Entonces vamos a ver que has sacado.</speak-char>
+      <condition />
+      <end-conversation>
+        <effect>
+          <trigger-scene idTarget="NotasFinales" x="960" y="810" transitionTime="750" transitionType="5" />
+          <condition />
+          <trigger-conversation idTarget="NotasDialogo" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="9" editor-x="1040" editor-y="894">
+      <speak-player>Pues vanga que el tiempo es oro.</speak-player>
       <condition />
       <end-conversation />
     </dialogue-node>
@@ -2497,7 +3399,7 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <option-node nodeindex="1" showUserOption="yes" editor-x="641" editor-y="50" x="641" y="50">
+    <option-node nodeindex="1" showUserOption="yes" preListening="yes" editor-x="641" editor-y="50" x="641" y="50">
       <speak-player>Es su responsabilidad, no la mía (pasar).</speak-player>
       <condition />
       <child nodeindex="2" />
@@ -2545,6 +3447,92 @@
       </end-conversation>
     </dialogue-node>
   </graph-conversation>
+  <graph-conversation id="NotasDialogo">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>A ver...</speak-player>
+      <condition />
+      <end-conversation>
+        <effect>
+          <trigger-conversation idTarget="NotasFD" />
+          <condition>
+            <less-equals-than var="objetosRecogidos" value="24" />
+          </condition>
+          <trigger-conversation idTarget="NotasC" />
+          <condition>
+            <greater-than var="objetosRecogidos" value="24" />
+            <less-equals-than var="objetosRecogidos" value="28" />
+          </condition>
+          <trigger-conversation idTarget="NotasB" />
+          <condition>
+            <greater-than var="objetosRecogidos" value="28" />
+            <less-equals-than var="objetosRecogidos" value="32" />
+          </condition>
+          <trigger-conversation idTarget="NotasA" />
+          <condition>
+            <greater-than var="objetosRecogidos" value="32" />
+            <less-equals-than var="objetosRecogidos" value="36" />
+          </condition>
+          <trigger-conversation idTarget="NotasA++" />
+          <condition>
+            <greater-than var="objetosRecogidos" value="36" />
+          </condition>
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="NotasFD">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="ProfOrganico">Vaya, veo que te falta mucho por aprender.</speak-char>
+      <condition />
+      <speak-char idTarget="ProfOrganico">Cuidar del medio ambiente es tarea de todos, y si quieres ayudar al futuro de nuestro planeta, tendrás que hacerlo mucho mejor.</speak-char>
+      <condition />
+      <speak-char idTarget="ProfOrganico">Vuelve a intentarlo la próxima vez.</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="NotasC">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="ProfOrganico">Veo que sabes algunas cosas, aunque todavía puedes hacerlo mucho mejor.</speak-char>
+      <condition />
+      <speak-char idTarget="ProfOrganico">Dale un repaso a todo lo que te hemos enseñado hoy, y seguro que la próxima vez lo haces mejor.</speak-char>
+      <condition />
+      <speak-char idTarget="ProfOrganico">¡Muy bien! Veo que has entendido cómo funciona el reciclaje y el uso de cada contenedor.</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="NotasB">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="ProfOrganico">¡Muy bien! Veo que has entendido cómo funciona el reciclaje y el uso de cada contenedor.</speak-char>
+      <condition />
+      <speak-char idTarget="ProfOrganico">Aunque todavía se te resisten algunos de los objetos más complicados de clasificar, pero muy bien hecho.</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="NotasA">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="ProfOrganico">¡Genial! Eres todo un fiera en esto del reciclaje.</speak-char>
+      <condition />
+      <speak-char idTarget="ProfOrganico">Has aprendido a clasificar los deshechos y a depositarlos correctamente, para hacer de nuestro mundo un lugar más limpio y mejor en el que vivir.</speak-char>
+      <condition />
+      <speak-char idTarget="ProfOrganico">¡Enhorabuena!</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="NotasA++">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="ProfOrganico">¡Increíble! No solo has acertado de lleno con todos los deshechos, sino que también has sabido ayudar a otras personas.</speak-char>
+      <condition />
+      <speak-char idTarget="ProfOrganico">Poco más hay que se te pueda enseñar en esto del reciclaje.</speak-char>
+      <condition />
+      <speak-char idTarget="ProfOrganico">¡Así que gracias por cuidar del medio ambiente!</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
   <slidescene id="EmpiezaColegio" start="no" idTarget="ClaseOrgánico" destinyX="-2147483648" destinyY="-2147483648" transitionTime="750" transitionType="5" next="new-scene" class="accesible" type="cutscene">
     <documentation>
     </documentation>
@@ -2569,7 +3557,7 @@
     <name>
     </name>
   </slidescene>
-  <timer time="600" usesEndCondition="yes" multipleStarts="yes" runsInLoop="no" showTime="yes" displayName="Tiempo" countDown="yes" showWhenStopped="no">
+  <timer time="900" usesEndCondition="yes" multipleStarts="yes" runsInLoop="no" showTime="yes" displayName="Tiempo" countDown="yes" showWhenStopped="no">
     <init-condition>
       <active flag="conversacionInactiva" />
     </init-condition>
@@ -2579,7 +3567,23 @@
     <effect>
       <deactivate flag="conversacionInactiva" />
       <condition />
+      <play-sound uri="assets/audio/timbre.mp3" />
+      <condition>
+        <inactive flag="timerFin" />
+      </condition>
+      <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">Se acabó el tiempo.</show-text>
+      <condition>
+        <inactive flag="timerFin" />
+      </condition>
       <trigger-scene idTarget="NotasFinales" x="960" y="810" transitionTime="750" transitionType="5" />
+      <condition>
+        <inactive flag="timerFin" />
+      </condition>
+      <trigger-conversation idTarget="NotasDialogo" />
+      <condition>
+        <inactive flag="timerFin" />
+      </condition>
+      <activate flag="timerFin" />
       <condition />
     </effect>
   </timer>
