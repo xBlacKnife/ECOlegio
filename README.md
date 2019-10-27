@@ -1,7 +1,7 @@
 # ECOLEGIO
 Juego desarrollado desarrollado en [Unity](https://unity.com/es) con **[uAdventure](https://github.com/e-ucm/uAdventure#downloads)** para la asignatura **Juegos Serios** de la Universidad Complutense de Madrid.
 
-![Game logo](\Resources\Gráfico\otros\logo.png)
+![Game logo](/Resources/Gráfico/otros/logo.png)
 
     Equipo de desarrollo:
         Martín Amechazurra Falagán
