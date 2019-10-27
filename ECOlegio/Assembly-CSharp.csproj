@@ -529,12 +529,14 @@
      <None Include="Assets\uAdventure\Resources\i18n\engine\en_EN.xml" />
      <None Include="Assets\uAdventure\Resources\CurrentGame\assets\animation\CutsceneEmpiezaColegio.eaa.xml" />
      <None Include="Assets\uAdventure\Resources\CurrentGame\assets\animation\Azul.eaa.xml" />
+     <None Include="Assets\uAdventure\Resources\CurrentGame\assets\animation\Chico1.eaa.xml" />
      <None Include="Assets\uAdventure\Shaders\SimpleBlur.shader" />
      <None Include="Assets\uAdventure\Resources\i18n\engine\zh_CN.xml" />
      <None Include="Assets\uAdventure\Resources\CurrentGame\assets\animation\profPapel.eaa.xml" />
      <None Include="Assets\uAdventure\Resources\CurrentGame\assets\animation\profOrganico.eaa.xml" />
      <None Include="Assets\uAdventure\Resources\CurrentGame\assets\animation\Marron.eaa.xml" />
      <None Include="Assets\uAdventure\Shaders\AlphaMask.shader" />
+     <None Include="Assets\uAdventure\Resources\CurrentGame\assets\animation\Chico2.eaa.xml" />
      <None Include="Assets\uAdventure\Resources\CurrentGame\assets\animation\contenedorOrganico.eaa.xml" />
      <None Include="Assets\uAdventure\Resources\i18n\engine\es_ES.xml" />
      <None Include="Assets\uAdventure\Resources\CurrentGame\project.xml" />
@@ -546,9 +548,11 @@
      <None Include="Assets\uAdventure\Resources\CurrentGame\descriptor.xml" />
      <None Include="Assets\uAdventure\Resources\CurrentGame\assets\animation\Verde.eaa.xml" />
      <None Include="Assets\uAdventure\Resources\i18n\engine\pt_PT.xml" />
+     <None Include="Assets\uAdventure\Resources\CurrentGame\assets\animation\Chica2.eaa.xml" />
      <None Include="Assets\uAdventureGeo\MapzenGo\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
      <None Include="Assets\uAdventure\Resources\i18n\engine\ru_RU.xml" />
      <None Include="Assets\uAdventure\Shaders\ShinyDefault.shader" />
+     <None Include="Assets\uAdventure\Resources\CurrentGame\assets\animation\Chica1.eaa.xml" />
      <None Include="Assets\uAdventure\Resources\config_editor.xml" />
      <None Include="Assets\uAdventure\Resources\Upgrader\chapter-v0-to-v1.xml" />
      <None Include="Assets\uAdventure\Resources\CurrentGame\assets\animation\finTutorial.eaa.xml" />

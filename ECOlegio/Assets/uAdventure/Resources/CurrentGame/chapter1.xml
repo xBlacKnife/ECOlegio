@@ -256,7 +256,7 @@
       <asset type="walkright" uri="assets/special/EmptyAnimation" />
       <asset type="walkleft" uri="assets/special/EmptyAnimation" />
     </resources>
-    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFBD00" bubbleBorderColor="#000000">
       <frontcolor color="#FFFFFF" />
       <bordercolor color="#000000" />
     </textcolor>
@@ -287,7 +287,7 @@
       <asset type="walkright" uri="assets/special/EmptyAnimation" />
       <asset type="walkleft" uri="assets/special/EmptyAnimation" />
     </resources>
-    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#009008" bubbleBorderColor="#000000">
       <frontcolor color="#FFFFFF" />
       <bordercolor color="#000000" />
     </textcolor>
@@ -318,7 +318,7 @@
       <asset type="walkright" uri="assets/special/EmptyAnimation" />
       <asset type="walkleft" uri="assets/special/EmptyAnimation" />
     </resources>
-    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#82AEFD" bubbleBorderColor="#000000">
       <frontcolor color="#FFFFFF" />
       <bordercolor color="#000000" />
     </textcolor>
@@ -349,7 +349,131 @@
       <asset type="walkright" uri="assets/special/EmptyAnimation" />
       <asset type="walkleft" uri="assets/special/EmptyAnimation" />
     </resources>
-    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#9D4E37" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+  </character>
+  <character id="ChicaPatio">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/Chica1.eaa.xml" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#DC8997" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+  </character>
+  <character id="ChicoCafeteria">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/Chico1.eaa.xml" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="yes" bubbleBkgColor="#191912" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+  </character>
+  <character id="ChicoPasillo">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/Chico2.eaa.xml" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#91261F" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+  </character>
+  <character id="ChicaPasillo">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/Chica2.eaa.xml" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#F2F2F2" bubbleBorderColor="#000000">
       <frontcolor color="#FFFFFF" />
       <bordercolor color="#000000" />
     </textcolor>
@@ -523,19 +647,20 @@
       </exit>
     </exits>
     <objects>
-      <object-ref idTarget="PapelHigienico" x="292" y="755" scale="1" layer="10" hasInfluenceArea="no" />
-      <object-ref idTarget="LataRefresco" x="368" y="551" scale="1" layer="9" hasInfluenceArea="no" />
-      <object-ref idTarget="AvionPapel" x="1678" y="871" scale="1" layer="8" hasInfluenceArea="no" />
-      <object-ref idTarget="Revista" x="768" y="899" scale="1" layer="7" hasInfluenceArea="no" />
-      <object-ref idTarget="Platano" x="1172" y="843" scale="1" layer="6" hasInfluenceArea="no" />
-      <object-ref idTarget="EspinaPescado" x="1623" y="739" scale="1" layer="5" hasInfluenceArea="no" />
-      <object-ref idTarget="BolsaPatatas" x="1918" y="891" scale="1" layer="4" hasInfluenceArea="no" />
+      <object-ref idTarget="PapelHigienico" x="292" y="755" scale="1" layer="11" hasInfluenceArea="no" />
+      <object-ref idTarget="LataRefresco" x="368" y="551" scale="1" layer="10" hasInfluenceArea="no" />
+      <object-ref idTarget="AvionPapel" x="1678" y="871" scale="1" layer="9" hasInfluenceArea="no" />
+      <object-ref idTarget="Revista" x="768" y="899" scale="1" layer="8" hasInfluenceArea="no" />
+      <object-ref idTarget="Platano" x="1172" y="843" scale="1" layer="7" hasInfluenceArea="no" />
+      <object-ref idTarget="EspinaPescado" x="1623" y="739" scale="1" layer="6" hasInfluenceArea="no" />
+      <object-ref idTarget="BolsaPatatas" x="1918" y="891" scale="1" layer="5" hasInfluenceArea="no" />
     </objects>
     <characters>
       <character-ref idTarget="ContenedorMarron" x="631" y="570" scale="0.8" orientation="2" layer="3" hasInfluenceArea="no" />
       <character-ref idTarget="ContenedorAzul" x="1789" y="570" scale="0.8" orientation="2" layer="2" hasInfluenceArea="no" />
       <character-ref idTarget="ContenedorVerde" x="980" y="570" scale="0.8" orientation="2" layer="1" hasInfluenceArea="no" />
       <character-ref idTarget="ContenedorAmarillo" x="1352" y="574" scale="0.8" orientation="2" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="ChicaPatio" x="499" y="843" scale="0.7732744" orientation="2" layer="4" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="PasilloPlanta0" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -637,10 +762,14 @@
       </exit>
     </exits>
     <objects>
-      <object-ref idTarget="Potito" x="606" y="1014" scale="0.153276" layer="2" hasInfluenceArea="no" />
-      <object-ref idTarget="BolaPapel" x="1728" y="941" scale="0.2184981" layer="1" hasInfluenceArea="no" />
+      <object-ref idTarget="Potito" x="606" y="1014" scale="0.153276" layer="4" hasInfluenceArea="no" />
+      <object-ref idTarget="BolaPapel" x="1728" y="941" scale="0.2184981" layer="3" hasInfluenceArea="no" />
       <object-ref idTarget="Periodico" x="841" y="594" scale="0.1698908" layer="0" hasInfluenceArea="no" />
     </objects>
+    <characters>
+      <character-ref idTarget="ChicoPasillo" x="315" y="754" scale="0.5706471" orientation="2" layer="2" hasInfluenceArea="no" />
+      <character-ref idTarget="ChicaPasillo" x="521" y="770" scale="0.8102924" orientation="2" layer="1" hasInfluenceArea="no" />
+    </characters>
   </scene>
   <scene id="PasilloPlanta2" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
@@ -710,6 +839,7 @@
     <resources name="No name">
       <asset type="background" uri="assets/background/burger.png" />
       <asset type="bgmusic" uri="assets/audio/cafeteria.mp3" />
+      <asset type="foreground" uri="" />
     </resources>
     <name>
     </name>
@@ -724,14 +854,17 @@
       </exit>
     </exits>
     <objects>
-      <object-ref idTarget="BotellaCola" x="244" y="361" scale="1" layer="6" hasInfluenceArea="no" />
-      <object-ref idTarget="CajaGalletas" x="1760" y="417" scale="1" layer="5" hasInfluenceArea="no" />
-      <object-ref idTarget="Galletas" x="1608" y="641" scale="1" layer="4" hasInfluenceArea="no" />
-      <object-ref idTarget="Tarro" x="1176" y="693" scale="1" layer="3" hasInfluenceArea="no" />
-      <object-ref idTarget="BrickLeche" x="952" y="705" scale="1" layer="2" hasInfluenceArea="no" />
-      <object-ref idTarget="Bocadillo" x="246" y="889" scale="1" layer="1" hasInfluenceArea="no" />
+      <object-ref idTarget="BotellaCola" x="244" y="361" scale="1" layer="7" hasInfluenceArea="no" />
+      <object-ref idTarget="CajaGalletas" x="1760" y="417" scale="1" layer="6" hasInfluenceArea="no" />
+      <object-ref idTarget="Galletas" x="1608" y="641" scale="1" layer="5" hasInfluenceArea="no" />
+      <object-ref idTarget="Tarro" x="1176" y="693" scale="1" layer="4" hasInfluenceArea="no" />
+      <object-ref idTarget="BrickLeche" x="952" y="705" scale="1" layer="3" hasInfluenceArea="no" />
+      <object-ref idTarget="Bocadillo" x="246" y="889" scale="1" layer="2" hasInfluenceArea="no" />
       <object-ref idTarget="BotellaAgua" x="756" y="417" scale="1" layer="0" hasInfluenceArea="no" />
     </objects>
+    <characters>
+      <character-ref idTarget="ChicoCafeteria" x="529" y="651" scale="0.607201" orientation="2" layer="1" hasInfluenceArea="no" />
+    </characters>
   </scene>
   <scene id="Menu" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
