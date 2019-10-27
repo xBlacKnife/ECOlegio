@@ -981,65 +981,65 @@
       <character-ref idTarget="ProfOrganico" x="956" y="-87" scale="0.872093" orientation="2" layer="0" hasInfluenceArea="no" />
     </characters>
     <atrezzo>
-      <atrezzo-ref idTarget="Nota-a" x="950" y="986" scale="0.35" layer="10">
+      <atrezzo-ref idTarget="Nota-a" x="1320" y="415" scale="0.35" layer="10">
         <condition>
           <greater-than var="objetosRecogidos" value="32" />
           <less-equals-than var="objetosRecogidos" value="36" />
         </condition>
       </atrezzo-ref>
-      <atrezzo-ref idTarget="Nota-a+" x="950" y="990" scale="0.35" layer="9">
+      <atrezzo-ref idTarget="Nota-a+" x="1320" y="415" scale="0.35" layer="9">
         <condition>
           <greater-than var="objetosRecogidos" value="32" />
           <less-equals-than var="objetosRecogidos" value="36" />
           <greater-equals-than var="eventosHechos" value="4" />
         </condition>
       </atrezzo-ref>
-      <atrezzo-ref idTarget="Nota-a++" x="950" y="986" scale="0.35" layer="8">
+      <atrezzo-ref idTarget="Nota-a++" x="1320" y="415" scale="0.35" layer="8">
         <condition>
           <greater-than var="objetosRecogidos" value="36" />
           <greater-than var="eventosHechos" value="4" />
         </condition>
       </atrezzo-ref>
-      <atrezzo-ref idTarget="Nota-b" x="950" y="986" scale="0.35" layer="7">
+      <atrezzo-ref idTarget="Nota-b" x="1320" y="415" scale="0.35" layer="7">
         <condition>
           <greater-than var="objetosRecogidos" value="28" />
           <less-equals-than var="objetosRecogidos" value="32" />
         </condition>
       </atrezzo-ref>
-      <atrezzo-ref idTarget="Nota-b+" x="950" y="986" scale="0.35" layer="6">
+      <atrezzo-ref idTarget="Nota-b+" x="1320" y="415" scale="0.35" layer="6">
         <condition>
           <greater-than var="objetosRecogidos" value="28" />
           <less-equals-than var="objetosRecogidos" value="32" />
           <greater-equals-than var="eventosHechos" value="4" />
         </condition>
       </atrezzo-ref>
-      <atrezzo-ref idTarget="Nota-c" x="950" y="986" scale="0.35" layer="5">
+      <atrezzo-ref idTarget="Nota-c" x="1320" y="415" scale="0.35" layer="5">
         <condition>
           <greater-than var="objetosRecogidos" value="24" />
           <less-equals-than var="objetosRecogidos" value="28" />
         </condition>
       </atrezzo-ref>
-      <atrezzo-ref idTarget="Nota-c+" x="950" y="986" scale="0.35" layer="4">
+      <atrezzo-ref idTarget="Nota-c+" x="1320" y="415" scale="0.35" layer="4">
         <condition>
           <greater-than var="objetosRecogidos" value="24" />
           <less-equals-than var="objetosRecogidos" value="28" />
           <greater-equals-than var="eventosHechos" value="4" />
         </condition>
       </atrezzo-ref>
-      <atrezzo-ref idTarget="Nota-d" x="950" y="986" scale="0.35" layer="3">
+      <atrezzo-ref idTarget="Nota-d" x="1320" y="415" scale="0.35" layer="3">
         <condition>
           <greater-than var="eventosHechos" value="20" />
           <less-equals-than var="eventosHechos" value="24" />
         </condition>
       </atrezzo-ref>
-      <atrezzo-ref idTarget="Nota-d+" x="950" y="986" scale="0.35" layer="2">
+      <atrezzo-ref idTarget="Nota-d+" x="1320" y="415" scale="0.35" layer="2">
         <condition>
           <greater-than var="objetosRecogidos" value="20" />
           <less-equals-than var="objetosRecogidos" value="24" />
           <greater-equals-than var="eventosHechos" value="4" />
         </condition>
       </atrezzo-ref>
-      <atrezzo-ref idTarget="Nota-f" x="950" y="986" scale="0.35" layer="1">
+      <atrezzo-ref idTarget="Nota-f" x="1320" y="415" scale="0.35" layer="1">
         <condition>
           <less-equals-than var="objetosRecogidos" value="20" />
         </condition>
